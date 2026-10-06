@@ -1,0 +1,3728 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_3d5ffb26bfdd19cdd018d4e506a8a60d {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+         <div style="position: fixed; bottom: 30px; left: 30px; width: 240px;
+                     border:2px solid grey; z-index:9999; font-size:13px;
+                     background-color:white; padding: 10px; font-family: 'Microsoft JhengHei', sans-serif; border-radius: 8px;">
+         <b>外單位 SO2 濃度指標（日最大小時值）</b><br>
+         資料日期：2026/10/05<br><br>
+         <i style="background:#FF0000; width: 16px; height: 16px; float: left; margin-right: 8px; border: 1px solid black;"></i> ≥ 65.0 ppb (不良)<br>
+         <i style="background:#FF7E00; width: 16px; height: 16px; float: left; margin-right: 8px; border: 1px solid black;"></i> 13.0 - 64.9 ppb (普通)<br>
+         <i style="background:#FFFF00; width: 16px; height: 16px; float: left; margin-right: 8px; border: 1px solid black;"></i> 6.5 - 12.9 ppb (良好)<br>
+         <i style="background:#00E800; width: 16px; height: 16px; float: left; margin-right: 8px; border: 1px solid black;"></i> &lt; 6.5 ppb (極佳)<br>
+         <i style="background:#999999; width: 16px; height: 16px; float: left; margin-right: 8px; border: 1px solid black;"></i> 無有效值<br>
+         <hr style="margin:6px 0;">
+         資料來源：環境部空氣品質監測網（外單位）<br>
+         產製時間：2026/10/06 12:01
+         </div>
+         
+    
+            <div class="folium-map" id="map_3d5ffb26bfdd19cdd018d4e506a8a60d" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_3d5ffb26bfdd19cdd018d4e506a8a60d = L.map(
+                "map_3d5ffb26bfdd19cdd018d4e506a8a60d",
+                {
+                    center: [23.7, 120.9],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 8,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_6099b3a8138305f38130d61cd8c538fc = L.tileLayer(
+                "https://mt1.google.com/vt/lyrs=m\u0026x={x}\u0026y={y}\u0026z={z}",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "Google Maps",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_6099b3a8138305f38130d61cd8c538fc.addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            var circle_marker_6701cd927557ad1e8d20775de903a517 = L.circleMarker(
+                [22.494869, 120.40097],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.0, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_6701cd927557ad1e8d20775de903a517.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：中油林園Q3</b><br>
+            高雄市　台灣中油股份有限公司<br>
+            SO2 最大值：<span style="font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>0.0 ppb</b></span><br>
+            等級：極佳
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6bc26e1be5119955b3bd8e8f25545f5f = L.circleMarker(
+                [22.495811, 120.406023],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.0, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_6bc26e1be5119955b3bd8e8f25545f5f.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：中油林園Q4</b><br>
+            高雄市　台灣中油股份有限公司<br>
+            SO2 最大值：<span style="font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>0.0 ppb</b></span><br>
+            等級：極佳
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a7015873d422abb0955ceab593f8ec5f = L.circleMarker(
+                [22.73681667, 121.12183611],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.148, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_a7015873d422abb0955ceab593f8ec5f.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：臺東豐里</b><br>
+            臺東縣　臺東縣環境保護局<br>
+            SO2 最大值：<span style="font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>0.74 ppb</b></span><br>
+            等級：極佳
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6087b2fd50e262b2407c20e9c8cad3ab = L.circleMarker(
+                [24.92975, 121.378478],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.154, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_6087b2fd50e262b2407c20e9c8cad3ab.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：新北三峽</b><br>
+            新北市　新北市政府環境保護局<br>
+            SO2 最大值：<span style="font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>0.77 ppb</b></span><br>
+            等級：極佳
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_15cfd2236403c2e19dfecb614c7c520a = L.circleMarker(
+                [25.036235, 121.572367],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.16, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_15cfd2236403c2e19dfecb614c7c520a.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：臺北信義</b><br>
+            臺北市　臺北市政府環境保護局<br>
+            SO2 最大值：<span style="font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>0.8 ppb</b></span><br>
+            等級：極佳
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5530f341847812669e90c0148946f28f = L.circleMarker(
+                [25.0499, 121.604],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.166, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_5530f341847812669e90c0148946f28f.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：臺北向陽</b><br>
+            臺北市　臺北市政府環境保護局<br>
+            SO2 最大值：<span style="font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>0.83 ppb</b></span><br>
+            等級：極佳
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2f12bbd3d8a885e193c04abb78500d00 = L.circleMarker(
+                [25.147346, 121.399791],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.172, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_2f12bbd3d8a885e193c04abb78500d00.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：台電八里</b><br>
+            新北市　台灣電力公司<br>
+            SO2 最大值：<span style="font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>0.86 ppb</b></span><br>
+            等級：極佳
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b026d869308beb0e1a7374a8dd03297f = L.circleMarker(
+                [24.987312, 121.576521],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.184, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_b026d869308beb0e1a7374a8dd03297f.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：臺北木柵</b><br>
+            臺北市　臺北市政府環境保護局<br>
+            SO2 最大值：<span style="font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>0.92 ppb</b></span><br>
+            等級：極佳
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8831087f37f51edc6de178606343c06f = L.circleMarker(
+                [25.054401, 121.606709],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.19, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_8831087f37f51edc6de178606343c06f.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：臺北南港</b><br>
+            臺北市　臺北市政府環境保護局<br>
+            SO2 最大值：<span style="font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>0.95 ppb</b></span><br>
+            等級：極佳
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0384aaa48856a9d55324cbfa99754184 = L.circleMarker(
+                [24.269259, 120.576376],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.2, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_0384aaa48856a9d55324cbfa99754184.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：台電清水</b><br>
+            臺中市　台灣電力公司<br>
+            SO2 最大值：<span style="font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>1.0 ppb</b></span><br>
+            等級：極佳
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6f2345423671504cc9940e74109eb82b = L.circleMarker(
+                [25.0384, 121.5488],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.202, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_6f2345423671504cc9940e74109eb82b.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：臺北大安</b><br>
+            臺北市　臺北市政府環境保護局<br>
+            SO2 最大值：<span style="font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>1.01 ppb</b></span><br>
+            等級：極佳
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_70ea35276fea5f8e17e8949fcc3ad465 = L.circleMarker(
+                [25.103376, 121.213915],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.204, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_70ea35276fea5f8e17e8949fcc3ad465.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：台電沙崙</b><br>
+            桃園市　台灣電力公司<br>
+            SO2 最大值：<span style="font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>1.02 ppb</b></span><br>
+            等級：極佳
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4106a3d672738cb06635c258aed588ca = L.circleMarker(
+                [25.10555556, 121.27472222],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.21, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_4106a3d672738cb06635c258aed588ca.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：台電坑口</b><br>
+            桃園市　台灣電力公司<br>
+            SO2 最大值：<span style="font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>1.05 ppb</b></span><br>
+            等級：極佳
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b6a19b9b18168c20771e995c2c8921cb = L.circleMarker(
+                [24.19361, 120.60861],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.22, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_b6a19b9b18168c20771e995c2c8921cb.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：中科國安</b><br>
+            臺中市　中部科學園區<br>
+            SO2 最大值：<span style="font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>1.1 ppb</b></span><br>
+            等級：極佳
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0724a11528ced168c8ceba1b227c7f46 = L.circleMarker(
+                [24.21111, 120.59833],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.2379999999999995, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_0724a11528ced168c8ceba1b227c7f46.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：中科公園</b><br>
+            臺中市　中部科學園區<br>
+            SO2 最大值：<span style="font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>1.19 ppb</b></span><br>
+            等級：極佳
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9d18fd28f3d17967058fa009ec444e4f = L.circleMarker(
+                [25.050622, 121.372764],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.24, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_9d18fd28f3d17967058fa009ec444e4f.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：桃園華亞</b><br>
+            桃園市　桃園市政府環境保護局<br>
+            SO2 最大值：<span style="font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>1.2 ppb</b></span><br>
+            等級：極佳
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_18e7a865c5a2b96d10a0eefaf2e30953 = L.circleMarker(
+                [24.967816, 121.259091],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.24, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_18e7a865c5a2b96d10a0eefaf2e30953.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：桃園內壢</b><br>
+            桃園市　桃園市政府環境保護局<br>
+            SO2 最大值：<span style="font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>1.2 ppb</b></span><br>
+            等級：極佳
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9d2047d8a4b36698ac7032baa6adaf59 = L.circleMarker(
+                [25.09104, 121.515999],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.252, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_9d2047d8a4b36698ac7032baa6adaf59.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：臺北承德</b><br>
+            臺北市　臺北市政府環境保護局<br>
+            SO2 最大值：<span style="font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>1.26 ppb</b></span><br>
+            等級：極佳
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_60df03c7a85b79975f2826ce8f6e5254 = L.circleMarker(
+                [25.067495, 121.589995],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.256, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_60df03c7a85b79975f2826ce8f6e5254.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：臺北內湖</b><br>
+            臺北市　臺北市政府環境保護局<br>
+            SO2 最大值：<span style="font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>1.28 ppb</b></span><br>
+            等級：極佳
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5b6d83ed1f89888086672c1ce072efcd = L.circleMarker(
+                [24.7042, 120.90894],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.26, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_5b6d83ed1f89888086672c1ce072efcd.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：竹科南南</b><br>
+            苗栗縣　新竹科學園區<br>
+            SO2 最大值：<span style="font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>1.3 ppb</b></span><br>
+            等級：極佳
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d6ff291a79c576d9417bbe016f397601 = L.circleMarker(
+                [25.05213, 121.522608],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.264, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_d6ff291a79c576d9417bbe016f397601.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：臺北中北</b><br>
+            臺北市　臺北市政府環境保護局<br>
+            SO2 最大值：<span style="font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>1.32 ppb</b></span><br>
+            等級：極佳
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7f63879f2eaa4492945c018ebfdcd543 = L.circleMarker(
+                [25.10099651, 121.54322965],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.27, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_7f63879f2eaa4492945c018ebfdcd543.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：臺北天母</b><br>
+            臺北市　臺北市政府環境保護局<br>
+            SO2 最大值：<span style="font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>1.35 ppb</b></span><br>
+            等級：極佳
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_08685a19fecc6609ad8f1fb72758a4ee = L.circleMarker(
+                [25.110209, 121.236566],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.274, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_08685a19fecc6609ad8f1fb72758a4ee.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：台電竹圍</b><br>
+            桃園市　台灣電力公司<br>
+            SO2 最大值：<span style="font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>1.37 ppb</b></span><br>
+            等級：極佳
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b96046298ecb4cb03bfa395a8cb883d6 = L.circleMarker(
+                [24.094, 120.6464],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.28, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_b96046298ecb4cb03bfa395a8cb883d6.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：臺中烏日</b><br>
+            臺中市　臺中市政府環境保護局<br>
+            SO2 最大值：<span style="font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>1.4 ppb</b></span><br>
+            等級：極佳
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_38c90e684d23af6d5d6c70305216ab4d = L.circleMarker(
+                [25.15749444, 121.7348833],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.28, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_38c90e684d23af6d5d6c70305216ab4d.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：台電油槽區</b><br>
+            基隆市　台灣電力公司<br>
+            SO2 最大值：<span style="font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>1.4 ppb</b></span><br>
+            等級：極佳
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_913f3632c84f995e653429210d3379fe = L.circleMarker(
+                [24.22944, 120.62583],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.29, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_913f3632c84f995e653429210d3379fe.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：中科實中</b><br>
+            臺中市　中部科學園區<br>
+            SO2 最大值：<span style="font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>1.45 ppb</b></span><br>
+            等級：極佳
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2d2184ae0fa25751de2ebdb2aeee368c = L.circleMarker(
+                [23.955864, 120.681667],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.3, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_2d2184ae0fa25751de2ebdb2aeee368c.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：台電草屯</b><br>
+            南投縣　台灣電力公司<br>
+            SO2 最大值：<span style="font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>1.5 ppb</b></span><br>
+            等級：極佳
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_510cc4844955292379fe266ac50e4792 = L.circleMarker(
+                [25.124868, 121.722075],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.3, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_510cc4844955292379fe266ac50e4792.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：台電建德</b><br>
+            基隆市　台灣電力公司<br>
+            SO2 最大值：<span style="font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>1.5 ppb</b></span><br>
+            等級：極佳
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9d127967c2f26588c6695390a03f0aa9 = L.circleMarker(
+                [25.035995, 121.515329],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.3, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_9d127967c2f26588c6695390a03f0aa9.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：臺北中正</b><br>
+            臺北市　臺北市政府環境保護局<br>
+            SO2 最大值：<span style="font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>1.5 ppb</b></span><br>
+            等級：極佳
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2922255f2c77da3417aa28675c828c41 = L.circleMarker(
+                [24.19972222, 120.4987222],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.3, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_2922255f2c77da3417aa28675c828c41.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：台電龍井</b><br>
+            臺中市　台灣電力公司<br>
+            SO2 最大值：<span style="font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>1.5 ppb</b></span><br>
+            等級：極佳
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3e02dc87e040e002d5aa77b16865afc0 = L.circleMarker(
+                [24.22139, 120.63194],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.318, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_3e02dc87e040e002d5aa77b16865afc0.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：中科陽明</b><br>
+            臺中市　中部科學園區<br>
+            SO2 最大值：<span style="font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>1.59 ppb</b></span><br>
+            等級：極佳
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9239911622f34b5b2f0d95874f1e7440 = L.circleMarker(
+                [22.855385, 120.25221],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.32, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_9239911622f34b5b2f0d95874f1e7440.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：台電文南</b><br>
+            高雄市　台灣電力公司<br>
+            SO2 最大值：<span style="font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>1.6 ppb</b></span><br>
+            等級：極佳
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7cef76cfeab5bf404ed06f243532249d = L.circleMarker(
+                [24.48099, 120.67593],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.32, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_7cef76cfeab5bf404ed06f243532249d.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：台電通南</b><br>
+            苗栗縣　台灣電力公司<br>
+            SO2 最大值：<span style="font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>1.6 ppb</b></span><br>
+            等級：極佳
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_bf79233f7163ec974cbc4c6508fe50be = L.circleMarker(
+                [25.07266375, 121.52128304],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.326, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_bf79233f7163ec974cbc4c6508fe50be.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：臺北延平</b><br>
+            臺北市　臺北市政府環境保護局<br>
+            SO2 最大值：<span style="font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>1.63 ppb</b></span><br>
+            等級：極佳
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_58fd5a39ec9fe6d1623382f3854c4039 = L.circleMarker(
+                [24.105214, 120.491938],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.336, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_58fd5a39ec9fe6d1623382f3854c4039.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：台電和美</b><br>
+            彰化縣　台灣電力公司<br>
+            SO2 最大值：<span style="font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>1.68 ppb</b></span><br>
+            等級：極佳
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_248e77f567716096c6df206c8e60b841 = L.circleMarker(
+                [22.858934, 120.200537],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.34, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_248e77f567716096c6df206c8e60b841.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：台電興達廠</b><br>
+            高雄市　台灣電力公司<br>
+            SO2 最大值：<span style="font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>1.7 ppb</b></span><br>
+            等級：極佳
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_589cf33ca96c92d2b5ab34d44845f1db = L.circleMarker(
+                [25.0522, 121.1182],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.36, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_589cf33ca96c92d2b5ab34d44845f1db.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：桃園觀音</b><br>
+            桃園市　桃園市政府環境保護局<br>
+            SO2 最大值：<span style="font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>1.8 ppb</b></span><br>
+            等級：極佳
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_45a1eb6f8b01d5e8bc49f915f8102a56 = L.circleMarker(
+                [23.10739722, 120.2912611],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.36, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_45a1eb6f8b01d5e8bc49f915f8102a56.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：南科實中</b><br>
+            臺南市　南部科學園區<br>
+            SO2 最大值：<span style="font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>1.8 ppb</b></span><br>
+            等級：極佳
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a6ef2a2ceadd8292c9c9a3b0749edc87 = L.circleMarker(
+                [24.179832, 120.606596],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.36, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_a6ef2a2ceadd8292c9c9a3b0749edc87.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：台電東大</b><br>
+            臺中市　台灣電力公司<br>
+            SO2 最大值：<span style="font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>1.8 ppb</b></span><br>
+            等級：極佳
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_45b3af2c49520e268a5cab077f974dab = L.circleMarker(
+                [25.0082, 121.2649],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.36, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_45b3af2c49520e268a5cab077f974dab.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：桃園新興</b><br>
+            桃園市　桃園市政府環境保護局<br>
+            SO2 最大值：<span style="font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>1.8 ppb</b></span><br>
+            等級：極佳
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_103a3c0fd6e79a85c4ba942d9f5c3cef = L.circleMarker(
+                [24.151575, 120.536801],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.36, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_103a3c0fd6e79a85c4ba942d9f5c3cef.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：台電大肚</b><br>
+            臺中市　台灣電力公司<br>
+            SO2 最大值：<span style="font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>1.8 ppb</b></span><br>
+            等級：極佳
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_34d69aeb4060caf2999a9cabe60d32df = L.circleMarker(
+                [22.815448, 120.224539],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.36, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_34d69aeb4060caf2999a9cabe60d32df.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：台電鹽田</b><br>
+            高雄市　台灣電力公司<br>
+            SO2 最大值：<span style="font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>1.8 ppb</b></span><br>
+            等級：極佳
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1cc5f769eb8d932d20b3b2d716657602 = L.circleMarker(
+                [25.02726, 121.309392],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.366, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_1cc5f769eb8d932d20b3b2d716657602.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：中油桃煉L1</b><br>
+            桃園市　台灣中油股份有限公司<br>
+            SO2 最大值：<span style="font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>1.83 ppb</b></span><br>
+            等級：極佳
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_15367dd421996436f563f5d207593fa0 = L.circleMarker(
+                [24.095895, 120.686413],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.38, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_15367dd421996436f563f5d207593fa0.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：臺中大里</b><br>
+            臺中市　臺中市政府環境保護局<br>
+            SO2 最大值：<span style="font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>1.9 ppb</b></span><br>
+            等級：極佳
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_025bdade913cd511f9e81eca49f485ae = L.circleMarker(
+                [24.2894805, 120.5182258],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.38, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_025bdade913cd511f9e81eca49f485ae.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：港務工作船渠</b><br>
+            臺中市　港務公司<br>
+            SO2 最大值：<span style="font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>1.9 ppb</b></span><br>
+            等級：極佳
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8a95076ceffa97c250c0925419e57437 = L.circleMarker(
+                [23.1771, 120.4921],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.38, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_8a95076ceffa97c250c0925419e57437.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：臺南楠西</b><br>
+            臺南市　臺南市政府環境保護局<br>
+            SO2 最大值：<span style="font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>1.9 ppb</b></span><br>
+            等級：極佳
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_475535f03ce333b888162f637115543d = L.circleMarker(
+                [24.70926, 120.92033],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.4, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_475535f03ce333b888162f637115543d.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：竹科南東</b><br>
+            苗栗縣　新竹科學園區<br>
+            SO2 最大值：<span style="font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>2.0 ppb</b></span><br>
+            等級：極佳
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6488b7a5fb52c899e51b27443ca22495 = L.circleMarker(
+                [24.778, 120.989823],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.4, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_6488b7a5fb52c899e51b27443ca22495.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：竹科興業</b><br>
+            新竹市　新竹科學園區<br>
+            SO2 最大值：<span style="font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>2.0 ppb</b></span><br>
+            等級：極佳
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_56a4c8dabef66376af8deb536a1890f1 = L.circleMarker(
+                [24.3505, 120.6152],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.4, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_56a4c8dabef66376af8deb536a1890f1.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：臺中大甲</b><br>
+            臺中市　臺中市政府環境保護局<br>
+            SO2 最大值：<span style="font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>2.0 ppb</b></span><br>
+            等級：極佳
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b25ecd8dd77e2179bae1b4b7d269bcbe = L.circleMarker(
+                [24.2885, 120.7237],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.404, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_b25ecd8dd77e2179bae1b4b7d269bcbe.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：中科七星</b><br>
+            臺中市　中部科學園區<br>
+            SO2 最大值：<span style="font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>2.02 ppb</b></span><br>
+            等級：極佳
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_348f4d52976cd02e0f07f74ebcd9604b = L.circleMarker(
+                [25.08158, 121.546884],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.408, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_348f4d52976cd02e0f07f74ebcd9604b.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：臺北大直</b><br>
+            臺北市　臺北市政府環境保護局<br>
+            SO2 最大值：<span style="font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>2.04 ppb</b></span><br>
+            等級：極佳
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0874a441e469c6c2eea13c0442b5ed44 = L.circleMarker(
+                [24.259141, 120.520564],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.42, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_0874a441e469c6c2eea13c0442b5ed44.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：港務中泊渠</b><br>
+            臺中市　港務公司<br>
+            SO2 最大值：<span style="font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>2.1 ppb</b></span><br>
+            等級：極佳
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_590731fbb9c4483a1c3a89c45817daba = L.circleMarker(
+                [24.1411, 120.5893],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.42, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_590731fbb9c4483a1c3a89c45817daba.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：臺中文山</b><br>
+            臺中市　臺中市政府環境保護局<br>
+            SO2 最大值：<span style="font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>2.1 ppb</b></span><br>
+            等級：極佳
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b67edbef68fc8e5fe1ad23d96609a6cf = L.circleMarker(
+                [25.08432222, 121.69853333],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.44, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_b67edbef68fc8e5fe1ad23d96609a6cf.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：台電七堵</b><br>
+            基隆市　台灣電力公司<br>
+            SO2 最大值：<span style="font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>2.2 ppb</b></span><br>
+            等級：極佳
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2d0102167705a7bbbcb3ae8ad382be5c = L.circleMarker(
+                [25.151481, 121.738251],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.44, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_2d0102167705a7bbbcb3ae8ad382be5c.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：台電協和宿舍</b><br>
+            基隆市　台灣電力公司<br>
+            SO2 最大值：<span style="font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>2.2 ppb</b></span><br>
+            等級：極佳
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d2bb233a0f70a3e917f20cb771b511b2 = L.circleMarker(
+                [23.09003889, 120.2845694],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.44, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_d2bb233a0f70a3e917f20cb771b511b2.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：南科公13</b><br>
+            臺南市　南部科學園區<br>
+            SO2 最大值：<span style="font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>2.2 ppb</b></span><br>
+            等級：極佳
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2dee486b6c824e5c1262f9431e65a42a = L.circleMarker(
+                [22.68291667, 120.35680556],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.44, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_2dee486b6c824e5c1262f9431e65a42a.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：高雄灣內</b><br>
+            高雄市　高雄市政府環境保護局<br>
+            SO2 最大值：<span style="font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>2.2 ppb</b></span><br>
+            等級：極佳
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_436a1928af35f4294ec8a3f11043fe89 = L.circleMarker(
+                [24.1395, 120.715],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.44, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_436a1928af35f4294ec8a3f11043fe89.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：臺中太平</b><br>
+            臺中市　臺中市政府環境保護局<br>
+            SO2 最大值：<span style="font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>2.2 ppb</b></span><br>
+            等級：極佳
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2b6a0d6bdb237c455a2daa6f1c198e30 = L.circleMarker(
+                [25.039382, 121.302438],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.442, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_2b6a0d6bdb237c455a2daa6f1c198e30.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：中油桃煉L4</b><br>
+            桃園市　台灣中油股份有限公司<br>
+            SO2 最大值：<span style="font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>2.21 ppb</b></span><br>
+            等級：極佳
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_12553b6ed280e859afd60022cd64f998 = L.circleMarker(
+                [25.119065, 121.301174],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.448, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_12553b6ed280e859afd60022cd64f998.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：台電林口廠</b><br>
+            新北市　台灣電力公司<br>
+            SO2 最大值：<span style="font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>2.24 ppb</b></span><br>
+            等級：極佳
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_039551029b497ffd9061bae41d1000ab = L.circleMarker(
+                [22.61694444, 120.26638889],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.46, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_039551029b497ffd9061bae41d1000ab.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：港務信號台</b><br>
+            高雄市　港務公司<br>
+            SO2 最大值：<span style="font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>2.3 ppb</b></span><br>
+            等級：極佳
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1a8c1496cd1136f2c8fb58c3bb06e910 = L.circleMarker(
+                [25.100133, 121.21266],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.4719999999999995, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_1a8c1496cd1136f2c8fb58c3bb06e910.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：中油桃煉L5</b><br>
+            桃園市　台灣中油股份有限公司<br>
+            SO2 最大值：<span style="font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>2.36 ppb</b></span><br>
+            等級：極佳
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0934043edcd2340b8613e738a7401c80 = L.circleMarker(
+                [22.532316, 120.336613],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.478, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_0934043edcd2340b8613e738a7401c80.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：中油大林A1</b><br>
+            高雄市　台灣中油股份有限公司<br>
+            SO2 最大值：<span style="font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>2.39 ppb</b></span><br>
+            等級：極佳
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f869af826fab5668ee6029ab96dc9581 = L.circleMarker(
+                [24.122698, 120.478021],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.48, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_f869af826fab5668ee6029ab96dc9581.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：台電線西</b><br>
+            彰化縣　台灣電力公司<br>
+            SO2 最大值：<span style="font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>2.4 ppb</b></span><br>
+            等級：極佳
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0051b5b5d20049a379f97cb29df2c722 = L.circleMarker(
+                [24.77834, 121.01372],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.48, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_0051b5b5d20049a379f97cb29df2c722.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：竹科靜心</b><br>
+            新竹市　新竹科學園區<br>
+            SO2 最大值：<span style="font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>2.4 ppb</b></span><br>
+            等級：極佳
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4cf9e883cec000d8c4aca91959b6a658 = L.circleMarker(
+                [24.3074, 120.7145],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.48, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_4cf9e883cec000d8c4aca91959b6a658.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：臺中后里</b><br>
+            臺中市　臺中市政府環境保護局<br>
+            SO2 最大值：<span style="font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>2.4 ppb</b></span><br>
+            等級：極佳
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1a70bb5c1a26c499f62649fd0b99379f = L.circleMarker(
+                [24.71307, 120.91049],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.5, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_1a70bb5c1a26c499f62649fd0b99379f.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：竹科南北</b><br>
+            苗栗縣　新竹科學園區<br>
+            SO2 最大值：<span style="font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>2.5 ppb</b></span><br>
+            等級：極佳
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_463a7c28034b9e1443bbf5317d90e941 = L.circleMarker(
+                [24.87702, 121.18688],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.5, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_463a7c28034b9e1443bbf5317d90e941.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：竹科移動</b><br>
+            桃園市　新竹科學園區<br>
+            SO2 最大值：<span style="font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>2.5 ppb</b></span><br>
+            等級：極佳
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3ecb8579e72491bdc58d0ad01912c180 = L.circleMarker(
+                [22.90872, 120.214103],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.5, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_3ecb8579e72491bdc58d0ad01912c180.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：台電文賢</b><br>
+            高雄市　台灣電力公司<br>
+            SO2 最大值：<span style="font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>2.5 ppb</b></span><br>
+            等級：極佳
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b4fe7a26c400ec48ff077cf93ddf28eb = L.circleMarker(
+                [24.766508, 121.01627],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.5, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_b4fe7a26c400ec48ff077cf93ddf28eb.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：竹科力行</b><br>
+            新竹縣　新竹科學園區<br>
+            SO2 最大值：<span style="font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>2.5 ppb</b></span><br>
+            等級：極佳
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9b88f192486c6d8e4dda982e1150b8c8 = L.circleMarker(
+                [22.48904, 120.409161],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.508, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_9b88f192486c6d8e4dda982e1150b8c8.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：中油林園Q1</b><br>
+            高雄市　台灣中油股份有限公司<br>
+            SO2 最大值：<span style="font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>2.54 ppb</b></span><br>
+            等級：極佳
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3255bc8933d3a001ea5df958fb8eeae2 = L.circleMarker(
+                [24.55687306, 120.70946889],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.52, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_3255bc8933d3a001ea5df958fb8eeae2.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：台電內島里</b><br>
+            苗栗縣　台灣電力公司<br>
+            SO2 最大值：<span style="font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>2.6 ppb</b></span><br>
+            等級：極佳
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e20602447df7ac204a4444aca45a2c10 = L.circleMarker(
+                [23.67957, 121.4521],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.534, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_e20602447df7ac204a4444aca45a2c10.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：花蓮鳳林</b><br>
+            花蓮縣　花蓮縣環境保護局<br>
+            SO2 最大值：<span style="font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>2.67 ppb</b></span><br>
+            等級：極佳
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_19ffd2bdfbdb96e979de8f66a77f84bf = L.circleMarker(
+                [23.791325, 120.3110306],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.538, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_19ffd2bdfbdb96e979de8f66a77f84bf.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：六輕崙背</b><br>
+            雲林縣　六輕工業區<br>
+            SO2 最大值：<span style="font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>2.69 ppb</b></span><br>
+            等級：極佳
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4b0b47860ed95fab48d674ed83e5d680 = L.circleMarker(
+                [24.147977, 120.486609],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.54, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_4b0b47860ed95fab48d674ed83e5d680.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：台電伸港</b><br>
+            彰化縣　台灣電力公司<br>
+            SO2 最大值：<span style="font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>2.7 ppb</b></span><br>
+            等級：極佳
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c49b358948c20a50374e00f5dd01c7d0 = L.circleMarker(
+                [24.88836, 121.18853],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.56, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_c49b358948c20a50374e00f5dd01c7d0.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：竹科龍潭</b><br>
+            桃園市　新竹科學園區<br>
+            SO2 最大值：<span style="font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>2.8 ppb</b></span><br>
+            等級：極佳
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_55bafdfe1a2e7f8b4d4eaf2dc5a62d39 = L.circleMarker(
+                [24.4898, 120.673807],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.56, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_55bafdfe1a2e7f8b4d4eaf2dc5a62d39.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：台電通霄</b><br>
+            苗栗縣　台灣電力公司<br>
+            SO2 最大值：<span style="font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>2.8 ppb</b></span><br>
+            等級：極佳
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_aca88c91d788486505cc01217914b32e = L.circleMarker(
+                [22.90658, 120.182561],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.56, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_aca88c91d788486505cc01217914b32e.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：台電茄萣</b><br>
+            高雄市　台灣電力公司<br>
+            SO2 最大值：<span style="font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>2.8 ppb</b></span><br>
+            等級：極佳
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8b822ca75491fcaaa32fffaf6396b9a0 = L.circleMarker(
+                [24.456728, 118.30822],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.58, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_8b822ca75491fcaaa32fffaf6396b9a0.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：台電金寧</b><br>
+            金門縣　台灣電力公司<br>
+            SO2 最大值：<span style="font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>2.9 ppb</b></span><br>
+            等級：極佳
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ec035f6652a6098c4f7ab3b60886c495 = L.circleMarker(
+                [23.0426, 120.1547],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.58, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_ec035f6652a6098c4f7ab3b60886c495.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：臺南城西</b><br>
+            臺南市　臺南市政府環境保護局<br>
+            SO2 最大值：<span style="font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>2.9 ppb</b></span><br>
+            等級：極佳
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f065fb007f34e9a7628d6af2a847512d = L.circleMarker(
+                [22.873853, 120.269376],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.58, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_f065fb007f34e9a7628d6af2a847512d.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：台電一甲</b><br>
+            高雄市　台灣電力公司<br>
+            SO2 最大值：<span style="font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>2.9 ppb</b></span><br>
+            等級：極佳
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_05aac160a20137b09631b7f14e2e6292 = L.circleMarker(
+                [24.88191, 121.19516],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.58, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_05aac160a20137b09631b7f14e2e6292.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：竹科德龍</b><br>
+            桃園市　新竹科學園區<br>
+            SO2 最大值：<span style="font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>2.9 ppb</b></span><br>
+            等級：極佳
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_70beeb4a4c1f37fb6e469b92063029c4 = L.circleMarker(
+                [22.599473, 120.302324],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.58, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_70beeb4a4c1f37fb6e469b92063029c4.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：台電南火</b><br>
+            高雄市　台灣電力公司<br>
+            SO2 最大值：<span style="font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>2.9 ppb</b></span><br>
+            等級：極佳
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_21f601dade85530a3fef17ddeb0bd845 = L.circleMarker(
+                [23.72195833, 120.3083472],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.582, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_21f601dade85530a3fef17ddeb0bd845.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：六輕褒忠</b><br>
+            雲林縣　六輕工業區<br>
+            SO2 最大值：<span style="font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>2.91 ppb</b></span><br>
+            等級：極佳
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7976d62ce6d67dbfdf62b2875602024d = L.circleMarker(
+                [22.80563889, 120.27366667],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.6, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_7976d62ce6d67dbfdf62b2875602024d.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：高雄岡山</b><br>
+            高雄市　高雄市政府環境保護局<br>
+            SO2 最大值：<span style="font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>3.0 ppb</b></span><br>
+            等級：極佳
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_01a802e41bf1ce35f5147b569bddd756 = L.circleMarker(
+                [24.446424, 120.637172],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.6, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_01a802e41bf1ce35f5147b569bddd756.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：台電海岸里</b><br>
+            苗栗縣　台灣電力公司<br>
+            SO2 最大值：<span style="font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>3.0 ppb</b></span><br>
+            等級：極佳
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b3a266bb8d6fb7c7a759440953b2ac68 = L.circleMarker(
+                [24.490271, 120.683883],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.6, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_b3a266bb8d6fb7c7a759440953b2ac68.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：台電通霄所</b><br>
+            苗栗縣　台灣電力公司<br>
+            SO2 最大值：<span style="font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>3.0 ppb</b></span><br>
+            等級：極佳
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_24d058d4f406930282409795a067d798 = L.circleMarker(
+                [23.7133408, 120.4306166],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.606, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_24d058d4f406930282409795a067d798.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：雲林虎尾</b><br>
+            雲林縣　雲林縣環境保護局<br>
+            SO2 最大值：<span style="font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>3.03 ppb</b></span><br>
+            等級：極佳
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d36a721a0020d940ef771584196d4e48 = L.circleMarker(
+                [23.76570556, 120.4580083],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.612, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_d36a721a0020d940ef771584196d4e48.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：六輕西螺</b><br>
+            雲林縣　六輕工業區<br>
+            SO2 最大值：<span style="font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>3.06 ppb</b></span><br>
+            等級：極佳
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_448eebceb150ea510aff1cf14d0df841 = L.circleMarker(
+                [23.12268611, 120.2679278],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.62, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_448eebceb150ea510aff1cf14d0df841.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：南科公19</b><br>
+            臺南市　南部科學園區<br>
+            SO2 最大值：<span style="font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>3.1 ppb</b></span><br>
+            等級：極佳
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d7aee1c4f4676a4eab8897ab328f19e9 = L.circleMarker(
+                [23.84872222, 120.28485],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.628, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_d7aee1c4f4676a4eab8897ab328f19e9.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：六輕大城</b><br>
+            彰化縣　六輕工業區<br>
+            SO2 最大值：<span style="font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>3.14 ppb</b></span><br>
+            等級：極佳
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_cda1785a1f34c9a860e8419bf660866d = L.circleMarker(
+                [23.63005, 120.1943472],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.636, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_cda1785a1f34c9a860e8419bf660866d.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：六輕四湖</b><br>
+            雲林縣　六輕工業區<br>
+            SO2 最大值：<span style="font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>3.18 ppb</b></span><br>
+            等級：極佳
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_443342298a834f2c9ce470fef3cc39f0 = L.circleMarker(
+                [23.567, 119.664662],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.64, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_443342298a834f2c9ce470fef3cc39f0.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：台電尖山</b><br>
+            澎湖縣　台灣電力公司<br>
+            SO2 最大值：<span style="font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>3.2 ppb</b></span><br>
+            等級：極佳
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3fdb635245def2e9d4e1e361811e71c6 = L.circleMarker(
+                [23.68655278, 120.3489583],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.642, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_3fdb635245def2e9d4e1e361811e71c6.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：六輕土庫</b><br>
+            雲林縣　六輕工業區<br>
+            SO2 最大值：<span style="font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>3.21 ppb</b></span><br>
+            等級：極佳
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b6d70bd84377ce39c721482432033acc = L.circleMarker(
+                [22.58857, 120.28671],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.658, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_b6d70bd84377ce39c721482432033acc.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：臨海旗津</b><br>
+            高雄市　臨海工業區<br>
+            SO2 最大值：<span style="font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>3.29 ppb</b></span><br>
+            等級：極佳
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_98a33ce28d65a540a3882306ac2c5cc5 = L.circleMarker(
+                [24.442189, 120.655011],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.66, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_98a33ce28d65a540a3882306ac2c5cc5.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：台電苑裡</b><br>
+            苗栗縣　台灣電力公司<br>
+            SO2 最大值：<span style="font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>3.3 ppb</b></span><br>
+            等級：極佳
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2b4a7204ba6a0928dd17dd49cceaf7a1 = L.circleMarker(
+                [24.43855, 118.318128],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.66, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_2b4a7204ba6a0928dd17dd49cceaf7a1.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：台電金門</b><br>
+            金門縣　台灣電力公司<br>
+            SO2 最大值：<span style="font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>3.3 ppb</b></span><br>
+            等級：極佳
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c64b6084b7fdea0e127fc042eb4c6a21 = L.circleMarker(
+                [23.57886111, 119.6763056],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.66, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_c64b6084b7fdea0e127fc042eb4c6a21.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：台電菓葉</b><br>
+            澎湖縣　台灣電力公司<br>
+            SO2 最大值：<span style="font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>3.3 ppb</b></span><br>
+            等級：極佳
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ab9a0aca903e771d5da2e3b7d915ef7a = L.circleMarker(
+                [23.67489167, 120.2524722],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.67, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_ab9a0aca903e771d5da2e3b7d915ef7a.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：六輕東勢</b><br>
+            雲林縣　六輕工業區<br>
+            SO2 最大值：<span style="font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>3.35 ppb</b></span><br>
+            等級：極佳
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d3023d6f16ad972d90049d837744d7bd = L.circleMarker(
+                [23.70252778, 120.1929083],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.674, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_d3023d6f16ad972d90049d837744d7bd.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：六輕臺西</b><br>
+            雲林縣　六輕工業區<br>
+            SO2 最大值：<span style="font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>3.37 ppb</b></span><br>
+            等級：極佳
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_239c19d7693f7bef11ed8d2fbc94fc94 = L.circleMarker(
+                [24.70683, 120.89635],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.68, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_239c19d7693f7bef11ed8d2fbc94fc94.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：竹科南西</b><br>
+            苗栗縣　新竹科學園區<br>
+            SO2 最大值：<span style="font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>3.4 ppb</b></span><br>
+            等級：極佳
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ecc91ec3c4d2c2d72f116cc4a5c79586 = L.circleMarker(
+                [25.033043, 121.306295],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.684, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_ecc91ec3c4d2c2d72f116cc4a5c79586.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：中油桃煉L3</b><br>
+            桃園市　台灣中油股份有限公司<br>
+            SO2 最大值：<span style="font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>3.42 ppb</b></span><br>
+            等級：極佳
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_90d5e060a09a6ce29307164bf5781833 = L.circleMarker(
+                [22.71327778, 120.3085],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.7, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_90d5e060a09a6ce29307164bf5781833.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：高雄宏毅</b><br>
+            高雄市　高雄市政府環境保護局<br>
+            SO2 最大值：<span style="font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>3.5 ppb</b></span><br>
+            等級：極佳
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c0dbe4bca9e84a7fbb06985614058770 = L.circleMarker(
+                [23.75841944, 120.2511139],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.7, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_c0dbe4bca9e84a7fbb06985614058770.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：六輕麥寮</b><br>
+            雲林縣　六輕工業區<br>
+            SO2 最大值：<span style="font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>3.5 ppb</b></span><br>
+            等級：極佳
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_316ee762404a0b0de4a5742b665734de = L.circleMarker(
+                [22.481753, 120.408958],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.7059999999999995, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_316ee762404a0b0de4a5742b665734de.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：林園汕尾</b><br>
+            高雄市　林園工業區<br>
+            SO2 最大值：<span style="font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>3.53 ppb</b></span><br>
+            等級：極佳
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0b2171ca96d2ecadcb7531d16ed7edb6 = L.circleMarker(
+                [22.48665, 120.394739],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.712, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_0b2171ca96d2ecadcb7531d16ed7edb6.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：林園西溪</b><br>
+            高雄市　林園工業區<br>
+            SO2 最大值：<span style="font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>3.56 ppb</b></span><br>
+            等級：極佳
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_fb0c9027e7a27a04c37f67e075ee2922 = L.circleMarker(
+                [23.46248333, 120.172425],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.728, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_fb0c9027e7a27a04c37f67e075ee2922.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：六輕東石</b><br>
+            嘉義縣　六輕工業區<br>
+            SO2 最大值：<span style="font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>3.64 ppb</b></span><br>
+            等級：極佳
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f75166ba8b6d8ea9571489119d1fb728 = L.circleMarker(
+                [22.57968, 120.32669],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.734, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_f75166ba8b6d8ea9571489119d1fb728.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：臨海明正</b><br>
+            高雄市　臨海工業區<br>
+            SO2 最大值：<span style="font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>3.67 ppb</b></span><br>
+            等級：極佳
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8c56827aa34021ef302d6f047decb9da = L.circleMarker(
+                [23.10635, 120.2692611],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.76, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_8c56827aa34021ef302d6f047decb9da.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：南科公29</b><br>
+            臺南市　南部科學園區<br>
+            SO2 最大值：<span style="font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>3.8 ppb</b></span><br>
+            等級：極佳
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_799f4a192686ef512fee0ccaac09a2a5 = L.circleMarker(
+                [24.500769, 120.684547],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.8, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_799f4a192686ef512fee0ccaac09a2a5.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：台電通灣</b><br>
+            苗栗縣　台灣電力公司<br>
+            SO2 最大值：<span style="font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>4.0 ppb</b></span><br>
+            等級：極佳
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_57bc4501d431b0fe1697966d75c5a440 = L.circleMarker(
+                [24.23766559, 120.5052513],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.82, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_57bc4501d431b0fe1697966d75c5a440.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：港務南突堤</b><br>
+            臺中市　港務公司<br>
+            SO2 最大值：<span style="font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>4.1 ppb</b></span><br>
+            等級：極佳
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_61e49f7ec58a51c22724e21290524f75 = L.circleMarker(
+                [22.644014, 120.312956],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.82, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_61e49f7ec58a51c22724e21290524f75.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：高雄愛國</b><br>
+            高雄市　高雄市政府環境保護局<br>
+            SO2 最大值：<span style="font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>4.1 ppb</b></span><br>
+            等級：極佳
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6623ed97aa0346348b45cf49872d40e6 = L.circleMarker(
+                [22.528177, 120.353663],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.852, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_6623ed97aa0346348b45cf49872d40e6.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：中鋼C</b><br>
+            高雄市　中國鋼鐵股份有限公司<br>
+            SO2 最大值：<span style="font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>4.26 ppb</b></span><br>
+            等級：極佳
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_62dac86e9192fe267455158b3b483c4e = L.circleMarker(
+                [22.56383889, 120.32538611],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.88, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_62dac86e9192fe267455158b3b483c4e.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：港務小港</b><br>
+            高雄市　港務公司<br>
+            SO2 最大值：<span style="font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>4.4 ppb</b></span><br>
+            等級：極佳
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_14979167ada44715b7716046f5bf8846 = L.circleMarker(
+                [25.030829, 121.307504],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.904, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_14979167ada44715b7716046f5bf8846.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：中油桃煉L2</b><br>
+            桃園市　台灣中油股份有限公司<br>
+            SO2 最大值：<span style="font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>4.52 ppb</b></span><br>
+            等級：極佳
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b12b7f1b8dfcb8df5a719740b30a4c38 = L.circleMarker(
+                [24.88916, 121.2019],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.92, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_b12b7f1b8dfcb8df5a719740b30a4c38.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：竹科聖德</b><br>
+            桃園市　新竹科學園區<br>
+            SO2 最大值：<span style="font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>4.6 ppb</b></span><br>
+            等級：極佳
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e2f8033ad0ebe5032298f31ecf0d81d8 = L.circleMarker(
+                [24.78458, 120.99236],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.94, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_e2f8033ad0ebe5032298f31ecf0d81d8.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：竹科新安</b><br>
+            新竹市　新竹科學園區<br>
+            SO2 最大值：<span style="font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>4.7 ppb</b></span><br>
+            等級：極佳
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2d3dc3081a752ef802a0b3a09c260867 = L.circleMarker(
+                [22.532463, 120.335968],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.96, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_2d3dc3081a752ef802a0b3a09c260867.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：台電大林廠</b><br>
+            高雄市　台灣電力公司<br>
+            SO2 最大值：<span style="font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>4.8 ppb</b></span><br>
+            等級：極佳
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_64fc39a7d7815283438bb81adaf27b36 = L.circleMarker(
+                [22.586822, 120.318888],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.96, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_64fc39a7d7815283438bb81adaf27b36.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：台電前鎮</b><br>
+            高雄市　台灣電力公司<br>
+            SO2 最大值：<span style="font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>4.8 ppb</b></span><br>
+            等級：極佳
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_862cfddb53b7b2f14eae00e6fa3e6b4d = L.circleMarker(
+                [22.50344, 120.37958],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.976, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_862cfddb53b7b2f14eae00e6fa3e6b4d.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：臨海頂厝</b><br>
+            高雄市　臨海工業區<br>
+            SO2 最大值：<span style="font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>4.88 ppb</b></span><br>
+            等級：極佳
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_54330b63a4ef9f9827e3ba3c79623a51 = L.circleMarker(
+                [22.508847, 120.394794],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.992, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_54330b63a4ef9f9827e3ba3c79623a51.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：林園林園</b><br>
+            高雄市　林園工業區<br>
+            SO2 最大值：<span style="font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>4.96 ppb</b></span><br>
+            等級：極佳
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d30b7c7be7fded199713210dc601315a = L.circleMarker(
+                [22.508847, 120.394794],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.992, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_d30b7c7be7fded199713210dc601315a.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：臨海林園</b><br>
+            高雄市　臨海工業區<br>
+            SO2 最大值：<span style="font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>4.96 ppb</b></span><br>
+            等級：極佳
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2174cf81bfbae933d47398ecba0a8338 = L.circleMarker(
+                [22.491111, 120.400139],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.022, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_2174cf81bfbae933d47398ecba0a8338.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：中油林園Q2</b><br>
+            高雄市　台灣中油股份有限公司<br>
+            SO2 最大值：<span style="font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>5.11 ppb</b></span><br>
+            等級：極佳
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f60511912d59cc2c5b2f6ef78afa76a7 = L.circleMarker(
+                [22.507211, 120.403808],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.04, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_f60511912d59cc2c5b2f6ef78afa76a7.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：林園五福</b><br>
+            高雄市　林園工業區<br>
+            SO2 最大值：<span style="font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>5.2 ppb</b></span><br>
+            等級：極佳
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f2a067fe7bd48e372c70466991b75ad0 = L.circleMarker(
+                [22.52972222, 120.32805556],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.04, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_f2a067fe7bd48e372c70466991b75ad0.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：港務南星</b><br>
+            高雄市　港務公司<br>
+            SO2 最大值：<span style="font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>5.2 ppb</b></span><br>
+            等級：極佳
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4b5163b954875321383104274f2c4793 = L.circleMarker(
+                [24.473646, 120.667624],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.04, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_4b5163b954875321383104274f2c4793.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：台電五北</b><br>
+            苗栗縣　台灣電力公司<br>
+            SO2 最大值：<span style="font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>5.2 ppb</b></span><br>
+            等級：極佳
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ca118ce1905956f0c0da2ebbc494ea99 = L.circleMarker(
+                [24.105977, 120.462088],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.0600000000000005, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_ca118ce1905956f0c0da2ebbc494ea99.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：台電鹿港</b><br>
+            彰化縣　台灣電力公司<br>
+            SO2 最大值：<span style="font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>5.3 ppb</b></span><br>
+            等級：極佳
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a83b61fd8a67d4de7b539db4df34273a = L.circleMarker(
+                [22.4794, 120.4417],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.07, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_a83b61fd8a67d4de7b539db4df34273a.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：屏東鹽洲</b><br>
+            屏東縣　屏東縣政府環境保護局<br>
+            SO2 最大值：<span style="font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>5.35 ppb</b></span><br>
+            等級：極佳
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b61b16ce315a57014b7dbdd5ab84d027 = L.circleMarker(
+                [22.613929, 120.297064],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.140000000000001, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_b61b16ce315a57014b7dbdd5ab84d027.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：台電成功</b><br>
+            高雄市　台灣電力公司<br>
+            SO2 最大值：<span style="font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>5.7 ppb</b></span><br>
+            等級：極佳
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_64471f050a4100e664d02f273a672844 = L.circleMarker(
+                [22.59916, 120.33945],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.15, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_64471f050a4100e664d02f273a672844.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：臨海二甲</b><br>
+            高雄市　臨海工業區<br>
+            SO2 最大值：<span style="font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>5.75 ppb</b></span><br>
+            等級：極佳
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a9ee621d6b185a9e059a805a64b39ec8 = L.circleMarker(
+                [22.550552, 120.347757],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.176, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_a9ee621d6b185a9e059a805a64b39ec8.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：中鋼D</b><br>
+            高雄市　中國鋼鐵股份有限公司<br>
+            SO2 最大值：<span style="font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>5.88 ppb</b></span><br>
+            等級：極佳
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_046ef6a3081250bd16852671200c4410 = L.circleMarker(
+                [22.56379, 120.353258],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.18, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_046ef6a3081250bd16852671200c4410.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：台電二苓</b><br>
+            高雄市　台灣電力公司<br>
+            SO2 最大值：<span style="font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>5.9 ppb</b></span><br>
+            等級：極佳
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a1c024e42866227bf1299c2cc593aad3 = L.circleMarker(
+                [24.041373, 120.413067],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.22, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_a1c024e42866227bf1299c2cc593aad3.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：台電福興</b><br>
+            彰化縣　台灣電力公司<br>
+            SO2 最大值：<span style="font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>6.1 ppb</b></span><br>
+            等級：極佳
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_12f661e460d4442c9250f88eb0a18306 = L.circleMarker(
+                [22.56583, 120.35671],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.232, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_12f661e460d4442c9250f88eb0a18306.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：臨海中山</b><br>
+            高雄市　臨海工業區<br>
+            SO2 最大值：<span style="font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>6.16 ppb</b></span><br>
+            等級：極佳
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_dc26efca298056fb26f871d162c47572 = L.circleMarker(
+                [25.139649, 121.737574],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.24, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_dc26efca298056fb26f871d162c47572.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：台電大德</b><br>
+            基隆市　台灣電力公司<br>
+            SO2 最大值：<span style="font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>6.2 ppb</b></span><br>
+            等級：極佳
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e7e44f0763888945795d57107af7d202 = L.circleMarker(
+                [22.558312, 120.356459],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFFF00", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.356, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_e7e44f0763888945795d57107af7d202.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：中鋼A</b><br>
+            高雄市　中國鋼鐵股份有限公司<br>
+            SO2 最大值：<span style="font-size: 16px; color: #FFFF00; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>6.78 ppb</b></span><br>
+            等級：良好
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_74718d7828f5fe632c15549b399e5f0d = L.circleMarker(
+                [23.550445, 119.610741],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFFF00", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.4, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_74718d7828f5fe632c15549b399e5f0d.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：台電興仁</b><br>
+            澎湖縣　台灣電力公司<br>
+            SO2 最大值：<span style="font-size: 16px; color: #FFFF00; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>7.0 ppb</b></span><br>
+            等級：良好
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_652de1af475ea3e63e2d91283e6411cf = L.circleMarker(
+                [22.508839, 120.455369],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFFF00", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.45, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_652de1af475ea3e63e2d91283e6411cf.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：林園港西</b><br>
+            屏東縣　林園工業區<br>
+            SO2 最大值：<span style="font-size: 16px; color: #FFFF00; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>7.25 ppb</b></span><br>
+            等級：良好
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e550bef4ee14ab7faba7f2719dd2b909 = L.circleMarker(
+                [22.57251, 120.37149],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFFF00", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.54, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_e550bef4ee14ab7faba7f2719dd2b909.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：臨海太平</b><br>
+            高雄市　臨海工業區<br>
+            SO2 最大值：<span style="font-size: 16px; color: #FFFF00; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>7.7 ppb</b></span><br>
+            等級：良好
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0ddea13b7b7c712aac6daadbabef8268 = L.circleMarker(
+                [22.52825, 120.355392],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFFF00", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.5600000000000005, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_0ddea13b7b7c712aac6daadbabef8268.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：中油大林A4</b><br>
+            高雄市　台灣中油股份有限公司<br>
+            SO2 最大值：<span style="font-size: 16px; color: #FFFF00; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>7.8 ppb</b></span><br>
+            等級：良好
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3ab6fe6d44fcd2bcf85b83aa05cefc8f = L.circleMarker(
+                [22.531994, 120.359647],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFFF00", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.5920000000000005, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_3ab6fe6d44fcd2bcf85b83aa05cefc8f.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：中鋼B</b><br>
+            高雄市　中國鋼鐵股份有限公司<br>
+            SO2 最大值：<span style="font-size: 16px; color: #FFFF00; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>7.96 ppb</b></span><br>
+            等級：良好
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_273460fc0d8214252c1da8d464069a60 = L.circleMarker(
+                [22.498569, 120.408064],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFFF00", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.6579999999999995, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_273460fc0d8214252c1da8d464069a60.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：林園中心</b><br>
+            高雄市　林園工業區<br>
+            SO2 最大值：<span style="font-size: 16px; color: #FFFF00; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>8.29 ppb</b></span><br>
+            等級：良好
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_cbb3d9725008922a9d7a308e18d24d27 = L.circleMarker(
+                [22.529506, 120.345712],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFFF00", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.788, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_cbb3d9725008922a9d7a308e18d24d27.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：中油大林A3</b><br>
+            高雄市　台灣中油股份有限公司<br>
+            SO2 最大值：<span style="font-size: 16px; color: #FFFF00; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>8.94 ppb</b></span><br>
+            等級：良好
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b43d214350c32e53f87e04fd8a508075 = L.circleMarker(
+                [22.531034, 120.348842],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFFF00", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.798, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_b43d214350c32e53f87e04fd8a508075.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：中油大林A2</b><br>
+            高雄市　台灣中油股份有限公司<br>
+            SO2 最大值：<span style="font-size: 16px; color: #FFFF00; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>8.99 ppb</b></span><br>
+            等級：良好
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9c71e3acde9f70b63228aca0967f9862 = L.circleMarker(
+                [22.547, 120.39781],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFFF00", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.898, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_9c71e3acde9f70b63228aca0967f9862.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：臨海大坪頂</b><br>
+            高雄市　臨海工業區<br>
+            SO2 最大值：<span style="font-size: 16px; color: #FFFF00; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>9.49 ppb</b></span><br>
+            等級：良好
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b35caa638d7959d696381ef89fe2ce26 = L.circleMarker(
+                [22.521828, 120.348503],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFFF00", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.088000000000001, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_b35caa638d7959d696381ef89fe2ce26.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：臨海鳳林</b><br>
+            高雄市　臨海工業區<br>
+            SO2 最大值：<span style="font-size: 16px; color: #FFFF00; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>10.44 ppb</b></span><br>
+            等級：良好
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_fe308353308b10ae21171a9a14f1346a = L.circleMarker(
+                [22.521828, 120.348503],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFFF00", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.088000000000001, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_fe308353308b10ae21171a9a14f1346a.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：林園鳳林</b><br>
+            高雄市　林園工業區<br>
+            SO2 最大值：<span style="font-size: 16px; color: #FFFF00; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>10.44 ppb</b></span><br>
+            等級：良好
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d990e7169de4b4859e5e0c718e3d67db = L.circleMarker(
+                [22.516256, 120.405436],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFFF00", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.134, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_d990e7169de4b4859e5e0c718e3d67db.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：林園溪州</b><br>
+            高雄市　林園工業區<br>
+            SO2 最大值：<span style="font-size: 16px; color: #FFFF00; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>10.67 ppb</b></span><br>
+            等級：良好
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_cf304733efec8296a97051b2c7634765 = L.circleMarker(
+                [22.526486, 120.34199],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFFF00", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.24, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_cf304733efec8296a97051b2c7634765.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：台電鳳林</b><br>
+            高雄市　台灣電力公司<br>
+            SO2 最大值：<span style="font-size: 16px; color: #FFFF00; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>11.2 ppb</b></span><br>
+            等級：良好
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_96fbf072442847aa3765343e8cbcdc27 = L.circleMarker(
+                [24.0573, 120.6972],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFFF00", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.36, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_96fbf072442847aa3765343e8cbcdc27.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：臺中霧峰</b><br>
+            臺中市　臺中市政府環境保護局<br>
+            SO2 最大值：<span style="font-size: 16px; color: #FFFF00; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>11.8 ppb</b></span><br>
+            等級：良好
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4273b42a14b03447f8ca27967672835a = L.circleMarker(
+                [22.552931, 120.36088],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFFF00", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.458, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_4273b42a14b03447f8ca27967672835a.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：中鋼E</b><br>
+            高雄市　中國鋼鐵股份有限公司<br>
+            SO2 最大值：<span style="font-size: 16px; color: #FFFF00; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>12.29 ppb</b></span><br>
+            等級：良好
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_746861484d6fd0cdf0c00b347b6c9f9e = L.circleMarker(
+                [22.56037, 120.40924],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFFF00", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.492, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_746861484d6fd0cdf0c00b347b6c9f9e.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：臨海新厝</b><br>
+            高雄市　臨海工業區<br>
+            SO2 最大值：<span style="font-size: 16px; color: #FFFF00; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>12.46 ppb</b></span><br>
+            等級：良好
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b567dc049bf7dcb04843c6acce11a6fc = L.circleMarker(
+                [22.538491, 120.374261],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF7E00", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.44, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_b567dc049bf7dcb04843c6acce11a6fc.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：中鋼F</b><br>
+            高雄市　中國鋼鐵股份有限公司<br>
+            SO2 最大值：<span style="font-size: 16px; color: #FF7E00; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>17.2 ppb</b></span><br>
+            等級：普通
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_56bc213a0cc3633d1bc75ae3c82a168a = L.circleMarker(
+                [22.562728, 120.428592],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF7E00", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10.582, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_56bc213a0cc3633d1bc75ae3c82a168a.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：林園潮寮</b><br>
+            高雄市　林園工業區<br>
+            SO2 最大值：<span style="font-size: 16px; color: #FF7E00; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>22.91 ppb</b></span><br>
+            等級：普通
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_de3b0877576b3a40c9b7487caec3fe2d = L.circleMarker(
+                [22.526986, 120.345858],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF7E00", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 11.5, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_de3b0877576b3a40c9b7487caec3fe2d.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：高雄大林蒲</b><br>
+            高雄市　高雄市政府環境保護局<br>
+            SO2 最大值：<span style="font-size: 16px; color: #FF7E00; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>27.5 ppb</b></span><br>
+            等級：普通
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_07daa2f119cc5751caf43580edfe4181 = L.circleMarker(
+                [22.517915, 120.356807],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF7E00", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 11.64, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_07daa2f119cc5751caf43580edfe4181.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：中油大林A5</b><br>
+            高雄市　台灣中油股份有限公司<br>
+            SO2 最大值：<span style="font-size: 16px; color: #FF7E00; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>28.2 ppb</b></span><br>
+            等級：普通
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c7be1b33f71e1df7b6dc9a7b02529523 = L.circleMarker(
+                [24.250509, 120.539089],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 16, "stroke": true, "weight": 1}
+            ).addTo(map_3d5ffb26bfdd19cdd018d4e506a8a60d);
+        
+    
+            circle_marker_c7be1b33f71e1df7b6dc9a7b02529523.bindTooltip(
+                `<div>
+                     
+        <div style="font-family: 'Microsoft JhengHei', sans-serif; font-size: 14px;">
+            <b>測站：台電梧棲</b><br>
+            臺中市　台灣電力公司<br>
+            SO2 最大值：<span style="font-size: 16px; color: #FF0000; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><b>96.4 ppb</b></span><br>
+            等級：不良
+        </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+</script>
+</html>
