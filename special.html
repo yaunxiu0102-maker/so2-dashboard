@@ -17,7 +17,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_2a2052aae02c69d7810abf936e28b6a1 {
+                #map_8509c0e7c877c9c73d1afb1510c0b31d {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -55,23 +55,23 @@
     
     
          <div style="position: fixed; bottom: 30px; left: 30px; width: 240px; border:2px solid grey; z-index:9999; font-size:13px; background-color:white; padding: 10px; font-family: 'Microsoft JhengHei', sans-serif; border-radius: 8px;">
-         <b>特工站 SO2 濃度指標（日最大小時值）</b><br>資料日期：2026/10/05<br><br>
+         <b>特工站 SO2 濃度指標（日最大小時值）</b><br>資料日期：2026/10/07<br><br>
          <i style="background:#FF0000; width: 16px; height: 16px; float: left; margin-right: 8px; border: 1px solid black;"></i> ≥ 65.0 ppb (不良)<br>
          <i style="background:#FF7E00; width: 16px; height: 16px; float: left; margin-right: 8px; border: 1px solid black;"></i> 13.0 - 64.9 ppb (普通)<br>
          <i style="background:#FFFF00; width: 16px; height: 16px; float: left; margin-right: 8px; border: 1px solid black;"></i> 6.5 - 12.9 ppb (良好)<br>
          <i style="background:#00E800; width: 16px; height: 16px; float: left; margin-right: 8px; border: 1px solid black;"></i> &lt; 6.5 ppb (極佳)<br>
          <i style="background:#999999; width: 16px; height: 16px; float: left; margin-right: 8px; border: 1px solid black;"></i> 無有效值<br>
-         <hr style="margin:6px 0;">資料來源：環境部特殊性工業區空氣品質管理資訊系統<br>產製時間：2026/10/06 17:18
+         <hr style="margin:6px 0;">資料來源：環境部特殊性工業區空氣品質管理資訊系統<br>產製時間：2026/10/08 08:02
          </div>
     
-            <div class="folium-map" id="map_2a2052aae02c69d7810abf936e28b6a1" ></div>
+            <div class="folium-map" id="map_8509c0e7c877c9c73d1afb1510c0b31d" ></div>
         
 </body>
 <script>
     
     
-            var map_2a2052aae02c69d7810abf936e28b6a1 = L.map(
-                "map_2a2052aae02c69d7810abf936e28b6a1",
+            var map_8509c0e7c877c9c73d1afb1510c0b31d = L.map(
+                "map_8509c0e7c877c9c73d1afb1510c0b31d",
                 {
                     center: [23.7, 120.9],
                     crs: L.CRS.EPSG3857,
@@ -88,7 +88,7 @@
 
         
     
-            var tile_layer_3584a33745cbaeb2041b262bded09bb3 = L.tileLayer(
+            var tile_layer_ecb5f1e8b37f065c4fcde63eb1fa8856 = L.tileLayer(
                 "https://mt1.google.com/vt/lyrs=m\u0026x={x}\u0026y={y}\u0026z={z}",
                 {
   "minZoom": 0,
@@ -105,40 +105,24 @@
             );
         
     
-            tile_layer_3584a33745cbaeb2041b262bded09bb3.addTo(map_2a2052aae02c69d7810abf936e28b6a1);
+            tile_layer_ecb5f1e8b37f065c4fcde63eb1fa8856.addTo(map_8509c0e7c877c9c73d1afb1510c0b31d);
         
     
-            var feature_group_bbdaddb0295c84b52bd01ae23f43e45c = L.featureGroup(
+            var feature_group_333e5265c9daaaf908de61582940939a = L.featureGroup(
                 {
 }
             );
         
     
-            var circle_marker_8be22fc912025462f18c244d6aaf5d40 = L.circleMarker(
-                [24.19361, 120.60861],
-                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.22, "stroke": true, "weight": 2}
-            ).addTo(feature_group_bbdaddb0295c84b52bd01ae23f43e45c);
-        
-    
-            circle_marker_8be22fc912025462f18c244d6aaf5d40.bindTooltip(
-                `<div>
-                     <div style='font-family: Microsoft JhengHei; font-size: 14px;'><b>【特工站】國安國小</b><br>中科臺中園區<br>SO2 最大值：<span style='font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);'><b>1.1 ppb</b></span><br>時間：2026/10/05 05:00<br>等級：極佳</div>
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-            var circle_marker_bb3fbf7f1b9bd17dd76761eaefbdfc12 = L.circleMarker(
+            var circle_marker_2217d2b871316219530fa24b89661218 = L.circleMarker(
                 [24.21111, 120.59833],
-                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.2379999999999995, "stroke": true, "weight": 2}
-            ).addTo(feature_group_bbdaddb0295c84b52bd01ae23f43e45c);
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.158, "stroke": true, "weight": 2}
+            ).addTo(feature_group_333e5265c9daaaf908de61582940939a);
         
     
-            circle_marker_bb3fbf7f1b9bd17dd76761eaefbdfc12.bindTooltip(
+            circle_marker_2217d2b871316219530fa24b89661218.bindTooltip(
                 `<div>
-                     <div style='font-family: Microsoft JhengHei; font-size: 14px;'><b>【特工站】都會公園</b><br>中科臺中園區<br>SO2 最大值：<span style='font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);'><b>1.19 ppb</b></span><br>時間：2026/10/05 02:00<br>等級：極佳</div>
+                     <div style='font-family: Microsoft JhengHei; font-size: 14px;'><b>【特工站】都會公園</b><br>中科臺中園區<br>SO2 最大值：<span style='font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);'><b>0.79 ppb</b></span><br>時間：2026/10/07 21:00<br>等級：極佳</div>
                  </div>`,
                 {
   "sticky": true,
@@ -146,56 +130,31 @@
             );
         
     
-            var circle_marker_a03bd25f635c0f573bb5dc47d38c90f7 = L.circleMarker(
+            var circle_marker_139297130907a9d2401690e565091726 = L.circleMarker(
+                [24.19361, 120.60861],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.23, "stroke": true, "weight": 2}
+            ).addTo(feature_group_333e5265c9daaaf908de61582940939a);
+        
+    
+            circle_marker_139297130907a9d2401690e565091726.bindTooltip(
+                `<div>
+                     <div style='font-family: Microsoft JhengHei; font-size: 14px;'><b>【特工站】國安國小</b><br>中科臺中園區<br>SO2 最大值：<span style='font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);'><b>1.15 ppb</b></span><br>時間：2026/10/07 07:00<br>等級：極佳</div>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f36307f3f1a40c11923a0c221dd0ecd8 = L.circleMarker(
                 [24.22944, 120.62583],
-                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.29, "stroke": true, "weight": 2}
-            ).addTo(feature_group_bbdaddb0295c84b52bd01ae23f43e45c);
-        
-    
-            circle_marker_a03bd25f635c0f573bb5dc47d38c90f7.bindTooltip(
-                `<div>
-                     <div style='font-family: Microsoft JhengHei; font-size: 14px;'><b>【特工站】中科實中</b><br>中科臺中園區<br>SO2 最大值：<span style='font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);'><b>1.45 ppb</b></span><br>時間：2026/10/05 07:00<br>等級：極佳</div>
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-            var circle_marker_b28e1ec7e0c79188afd2adbd941ffdc5 = L.circleMarker(
-                [24.22139, 120.63194],
-                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.318, "stroke": true, "weight": 2}
-            ).addTo(feature_group_bbdaddb0295c84b52bd01ae23f43e45c);
-        
-    
-            circle_marker_b28e1ec7e0c79188afd2adbd941ffdc5.bindTooltip(
-                `<div>
-                     <div style='font-family: Microsoft JhengHei; font-size: 14px;'><b>【特工站】陽明國小</b><br>中科臺中園區<br>SO2 最大值：<span style='font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);'><b>1.59 ppb</b></span><br>時間：2026/10/05 08:00<br>等級：極佳</div>
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-            feature_group_bbdaddb0295c84b52bd01ae23f43e45c.addTo(map_2a2052aae02c69d7810abf936e28b6a1);
-        
-    
-            var feature_group_5e5f697f61469cb04303f7e9afb181e5 = L.featureGroup(
-                {
-}
-            );
-        
-    
-            var circle_marker_5e590e0cc6d2fb0a2308aa97a47ff1c4 = L.circleMarker(
-                [24.70611, 120.91282],
                 {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.26, "stroke": true, "weight": 2}
-            ).addTo(feature_group_5e5f697f61469cb04303f7e9afb181e5);
+            ).addTo(feature_group_333e5265c9daaaf908de61582940939a);
         
     
-            circle_marker_5e590e0cc6d2fb0a2308aa97a47ff1c4.bindTooltip(
+            circle_marker_f36307f3f1a40c11923a0c221dd0ecd8.bindTooltip(
                 `<div>
-                     <div style='font-family: Microsoft JhengHei; font-size: 14px;'><b>【特工站】竹南南站</b><br>竹科竹南園區<br>SO2 最大值：<span style='font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);'><b>1.3 ppb</b></span><br>時間：2026/10/05 09:00<br>等級：極佳</div>
+                     <div style='font-family: Microsoft JhengHei; font-size: 14px;'><b>【特工站】中科實中</b><br>中科臺中園區<br>SO2 最大值：<span style='font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);'><b>1.3 ppb</b></span><br>時間：2026/10/07 14:00<br>等級：極佳</div>
                  </div>`,
                 {
   "sticky": true,
@@ -203,15 +162,15 @@
             );
         
     
-            var circle_marker_399e3a879413eca236740cf1d942ab3b = L.circleMarker(
-                [24.70966, 120.92154],
-                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.4, "stroke": true, "weight": 2}
-            ).addTo(feature_group_5e5f697f61469cb04303f7e9afb181e5);
+            var circle_marker_15c863a309ccb0ff4c79f16a5b57cd4c = L.circleMarker(
+                [24.22139, 120.63194],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.364, "stroke": true, "weight": 2}
+            ).addTo(feature_group_333e5265c9daaaf908de61582940939a);
         
     
-            circle_marker_399e3a879413eca236740cf1d942ab3b.bindTooltip(
+            circle_marker_15c863a309ccb0ff4c79f16a5b57cd4c.bindTooltip(
                 `<div>
-                     <div style='font-family: Microsoft JhengHei; font-size: 14px;'><b>【特工站】竹南東站</b><br>竹科竹南園區<br>SO2 最大值：<span style='font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);'><b>2.0 ppb</b></span><br>時間：2026/10/05 09:00<br>等級：極佳</div>
+                     <div style='font-family: Microsoft JhengHei; font-size: 14px;'><b>【特工站】陽明國小</b><br>中科臺中園區<br>SO2 最大值：<span style='font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);'><b>1.82 ppb</b></span><br>時間：2026/10/07 10:00<br>等級：極佳</div>
                  </div>`,
                 {
   "sticky": true,
@@ -219,56 +178,24 @@
             );
         
     
-            var circle_marker_b1a4afb52f21c92e6422e21b897b510a = L.circleMarker(
-                [24.70817, 120.89529],
-                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.5, "stroke": true, "weight": 2}
-            ).addTo(feature_group_5e5f697f61469cb04303f7e9afb181e5);
+            feature_group_333e5265c9daaaf908de61582940939a.addTo(map_8509c0e7c877c9c73d1afb1510c0b31d);
         
     
-            circle_marker_b1a4afb52f21c92e6422e21b897b510a.bindTooltip(
-                `<div>
-                     <div style='font-family: Microsoft JhengHei; font-size: 14px;'><b>【特工站】竹南北站</b><br>竹科竹南園區<br>SO2 最大值：<span style='font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);'><b>2.5 ppb</b></span><br>時間：2026/10/05 05:00<br>等級：極佳</div>
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-            var circle_marker_3fcac2e03163b504238727c0f6529567 = L.circleMarker(
-                [24.71361, 120.91031],
-                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.68, "stroke": true, "weight": 2}
-            ).addTo(feature_group_5e5f697f61469cb04303f7e9afb181e5);
-        
-    
-            circle_marker_3fcac2e03163b504238727c0f6529567.bindTooltip(
-                `<div>
-                     <div style='font-family: Microsoft JhengHei; font-size: 14px;'><b>【特工站】竹南西站</b><br>竹科竹南園區<br>SO2 最大值：<span style='font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);'><b>3.4 ppb</b></span><br>時間：2026/10/05 03:00<br>等級：極佳</div>
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-            feature_group_5e5f697f61469cb04303f7e9afb181e5.addTo(map_2a2052aae02c69d7810abf936e28b6a1);
-        
-    
-            var feature_group_a232ef5f1ce707c80570e893148f20d3 = L.featureGroup(
+            var feature_group_2cfe21fde36ec1925869d8cee5d24a7e = L.featureGroup(
                 {
 }
             );
         
     
-            var circle_marker_838ea7b0105d144a134aa524cb3a2aa3 = L.circleMarker(
-                [23.10739722, 120.2912611],
+            var circle_marker_4cd905bde8104da02fa8c56950530734 = L.circleMarker(
+                [24.70611, 120.91282],
                 {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.36, "stroke": true, "weight": 2}
-            ).addTo(feature_group_a232ef5f1ce707c80570e893148f20d3);
+            ).addTo(feature_group_2cfe21fde36ec1925869d8cee5d24a7e);
         
     
-            circle_marker_838ea7b0105d144a134aa524cb3a2aa3.bindTooltip(
+            circle_marker_4cd905bde8104da02fa8c56950530734.bindTooltip(
                 `<div>
-                     <div style='font-family: Microsoft JhengHei; font-size: 14px;'><b>【特工站】南科實中測站</b><br>南科臺南園區<br>SO2 最大值：<span style='font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);'><b>1.8 ppb</b></span><br>時間：2026/10/05 00:00<br>等級：極佳</div>
+                     <div style='font-family: Microsoft JhengHei; font-size: 14px;'><b>【特工站】竹南南站</b><br>竹科竹南園區<br>SO2 最大值：<span style='font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);'><b>1.8 ppb</b></span><br>時間：2026/10/07 00:00<br>等級：極佳</div>
                  </div>`,
                 {
   "sticky": true,
@@ -276,15 +203,15 @@
             );
         
     
-            var circle_marker_6da326cb7590379717f509915b4c2199 = L.circleMarker(
-                [23.09003889, 120.2845694],
-                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.44, "stroke": true, "weight": 2}
-            ).addTo(feature_group_a232ef5f1ce707c80570e893148f20d3);
+            var circle_marker_42a47ed2af5c560534a3b297b7739743 = L.circleMarker(
+                [24.70817, 120.89529],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.46, "stroke": true, "weight": 2}
+            ).addTo(feature_group_2cfe21fde36ec1925869d8cee5d24a7e);
         
     
-            circle_marker_6da326cb7590379717f509915b4c2199.bindTooltip(
+            circle_marker_42a47ed2af5c560534a3b297b7739743.bindTooltip(
                 `<div>
-                     <div style='font-family: Microsoft JhengHei; font-size: 14px;'><b>【特工站】公13測站</b><br>南科臺南園區<br>SO2 最大值：<span style='font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);'><b>2.2 ppb</b></span><br>時間：2026/10/05 19:00<br>等級：極佳</div>
+                     <div style='font-family: Microsoft JhengHei; font-size: 14px;'><b>【特工站】竹南北站</b><br>竹科竹南園區<br>SO2 最大值：<span style='font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);'><b>2.3 ppb</b></span><br>時間：2026/10/07 02:00<br>等級：極佳</div>
                  </div>`,
                 {
   "sticky": true,
@@ -292,88 +219,15 @@
             );
         
     
-            var circle_marker_adfd6d11adbde294022144229df55955 = L.circleMarker(
-                [23.12582, 120.26943],
-                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.62, "stroke": true, "weight": 2}
-            ).addTo(feature_group_a232ef5f1ce707c80570e893148f20d3);
-        
-    
-            circle_marker_adfd6d11adbde294022144229df55955.bindTooltip(
-                `<div>
-                     <div style='font-family: Microsoft JhengHei; font-size: 14px;'><b>【特工站】公19測站</b><br>南科臺南園區<br>SO2 最大值：<span style='font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);'><b>3.1 ppb</b></span><br>時間：2026/10/05 05:00<br>等級：極佳</div>
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-            var circle_marker_2bb4c8fca03b8c27ce70bf0876189664 = L.circleMarker(
-                [23.10635, 120.2692611],
-                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.76, "stroke": true, "weight": 2}
-            ).addTo(feature_group_a232ef5f1ce707c80570e893148f20d3);
-        
-    
-            circle_marker_2bb4c8fca03b8c27ce70bf0876189664.bindTooltip(
-                `<div>
-                     <div style='font-family: Microsoft JhengHei; font-size: 14px;'><b>【特工站】公29測站</b><br>南科臺南園區<br>SO2 最大值：<span style='font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);'><b>3.8 ppb</b></span><br>時間：2026/10/05 12:00<br>等級：極佳</div>
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-            feature_group_a232ef5f1ce707c80570e893148f20d3.addTo(map_2a2052aae02c69d7810abf936e28b6a1);
-        
-    
-            var feature_group_ccfcdf6f640a2478ab5556df673d660b = L.featureGroup(
-                {
-}
-            );
-        
-    
-            var circle_marker_b47d2669703cce044e12956b47b1b4a2 = L.circleMarker(
-                [24.77806, 120.989786],
-                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.4, "stroke": true, "weight": 2}
-            ).addTo(feature_group_ccfcdf6f640a2478ab5556df673d660b);
-        
-    
-            circle_marker_b47d2669703cce044e12956b47b1b4a2.bindTooltip(
-                `<div>
-                     <div style='font-family: Microsoft JhengHei; font-size: 14px;'><b>【特工站】興業站</b><br>竹科新竹園區<br>SO2 最大值：<span style='font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);'><b>2.0 ppb</b></span><br>時間：2026/10/05 00:00<br>等級：極佳</div>
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-            var circle_marker_278dc872a5859cc16214afcd22429f98 = L.circleMarker(
-                [24.778281, 121.013773],
-                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.48, "stroke": true, "weight": 2}
-            ).addTo(feature_group_ccfcdf6f640a2478ab5556df673d660b);
-        
-    
-            circle_marker_278dc872a5859cc16214afcd22429f98.bindTooltip(
-                `<div>
-                     <div style='font-family: Microsoft JhengHei; font-size: 14px;'><b>【特工站】靜心湖站</b><br>竹科新竹園區<br>SO2 最大值：<span style='font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);'><b>2.4 ppb</b></span><br>時間：2026/10/05 00:00<br>等級：極佳</div>
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-            var circle_marker_26dbbeda4c187e935cd6464956714e5b = L.circleMarker(
-                [24.76637, 121.016265],
+            var circle_marker_694f2781c46a1b66acf925024098cf6c = L.circleMarker(
+                [24.70966, 120.92154],
                 {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.5, "stroke": true, "weight": 2}
-            ).addTo(feature_group_ccfcdf6f640a2478ab5556df673d660b);
+            ).addTo(feature_group_2cfe21fde36ec1925869d8cee5d24a7e);
         
     
-            circle_marker_26dbbeda4c187e935cd6464956714e5b.bindTooltip(
+            circle_marker_694f2781c46a1b66acf925024098cf6c.bindTooltip(
                 `<div>
-                     <div style='font-family: Microsoft JhengHei; font-size: 14px;'><b>【特工站】力行站</b><br>竹科新竹園區<br>SO2 最大值：<span style='font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);'><b>2.5 ppb</b></span><br>時間：2026/10/05 01:00<br>等級：極佳</div>
+                     <div style='font-family: Microsoft JhengHei; font-size: 14px;'><b>【特工站】竹南東站</b><br>竹科竹南園區<br>SO2 最大值：<span style='font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);'><b>2.5 ppb</b></span><br>時間：2026/10/07 00:00<br>等級：極佳</div>
                  </div>`,
                 {
   "sticky": true,
@@ -381,15 +235,72 @@
             );
         
     
-            var circle_marker_10133abb7c33386bc0b6ab591231119e = L.circleMarker(
+            var circle_marker_a0054cae556da5c378e7eaa6b8aba71f = L.circleMarker(
+                [24.71361, 120.91031],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.54, "stroke": true, "weight": 2}
+            ).addTo(feature_group_2cfe21fde36ec1925869d8cee5d24a7e);
+        
+    
+            circle_marker_a0054cae556da5c378e7eaa6b8aba71f.bindTooltip(
+                `<div>
+                     <div style='font-family: Microsoft JhengHei; font-size: 14px;'><b>【特工站】竹南西站</b><br>竹科竹南園區<br>SO2 最大值：<span style='font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);'><b>2.7 ppb</b></span><br>時間：2026/10/07 02:00<br>等級：極佳</div>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            feature_group_2cfe21fde36ec1925869d8cee5d24a7e.addTo(map_8509c0e7c877c9c73d1afb1510c0b31d);
+        
+    
+            var feature_group_03206c574d07283b189a83d86cff5516 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var circle_marker_033753ed1f0f6c7c3257d9c6fd81f27c = L.circleMarker(
+                [24.778281, 121.013773],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.38, "stroke": true, "weight": 2}
+            ).addTo(feature_group_03206c574d07283b189a83d86cff5516);
+        
+    
+            circle_marker_033753ed1f0f6c7c3257d9c6fd81f27c.bindTooltip(
+                `<div>
+                     <div style='font-family: Microsoft JhengHei; font-size: 14px;'><b>【特工站】靜心湖站</b><br>竹科新竹園區<br>SO2 最大值：<span style='font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);'><b>1.9 ppb</b></span><br>時間：2026/10/07 15:00<br>等級：極佳</div>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_180000e2f73679912ddf03ab2e150a55 = L.circleMarker(
+                [24.76637, 121.016265],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.46, "stroke": true, "weight": 2}
+            ).addTo(feature_group_03206c574d07283b189a83d86cff5516);
+        
+    
+            circle_marker_180000e2f73679912ddf03ab2e150a55.bindTooltip(
+                `<div>
+                     <div style='font-family: Microsoft JhengHei; font-size: 14px;'><b>【特工站】力行站</b><br>竹科新竹園區<br>SO2 最大值：<span style='font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);'><b>2.3 ppb</b></span><br>時間：2026/10/07 01:00<br>等級：極佳</div>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a1426177eaaf161b5bf2ff4e3ef34db2 = L.circleMarker(
                 [24.784714, 120.991939],
-                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.94, "stroke": true, "weight": 2}
-            ).addTo(feature_group_ccfcdf6f640a2478ab5556df673d660b);
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.48, "stroke": true, "weight": 2}
+            ).addTo(feature_group_03206c574d07283b189a83d86cff5516);
         
     
-            circle_marker_10133abb7c33386bc0b6ab591231119e.bindTooltip(
+            circle_marker_a1426177eaaf161b5bf2ff4e3ef34db2.bindTooltip(
                 `<div>
-                     <div style='font-family: Microsoft JhengHei; font-size: 14px;'><b>【特工站】新安站</b><br>竹科新竹園區<br>SO2 最大值：<span style='font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);'><b>4.7 ppb</b></span><br>時間：2026/10/05 05:00<br>等級：極佳</div>
+                     <div style='font-family: Microsoft JhengHei; font-size: 14px;'><b>【特工站】新安站</b><br>竹科新竹園區<br>SO2 最大值：<span style='font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);'><b>2.4 ppb</b></span><br>時間：2026/10/07 02:00<br>等級：極佳</div>
                  </div>`,
                 {
   "sticky": true,
@@ -397,24 +308,15 @@
             );
         
     
-            feature_group_ccfcdf6f640a2478ab5556df673d660b.addTo(map_2a2052aae02c69d7810abf936e28b6a1);
+            var circle_marker_77639f1ca946448438ea703ad7a1c914 = L.circleMarker(
+                [24.77806, 120.989786],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.5, "stroke": true, "weight": 2}
+            ).addTo(feature_group_03206c574d07283b189a83d86cff5516);
         
     
-            var feature_group_16b9af9dee0741fbd69462820892bc14 = L.featureGroup(
-                {
-}
-            );
-        
-    
-            var circle_marker_264034f623ef56b6bcf98596aaad6703 = L.circleMarker(
-                [23.791325, 120.3110306],
-                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.538, "stroke": true, "weight": 2}
-            ).addTo(feature_group_16b9af9dee0741fbd69462820892bc14);
-        
-    
-            circle_marker_264034f623ef56b6bcf98596aaad6703.bindTooltip(
+            circle_marker_77639f1ca946448438ea703ad7a1c914.bindTooltip(
                 `<div>
-                     <div style='font-family: Microsoft JhengHei; font-size: 14px;'><b>【特工站】雲林縣崙背站</b><br>台塑六輕工業園區<br>SO2 最大值：<span style='font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);'><b>2.69 ppb</b></span><br>時間：2026/10/05 10:00<br>等級：極佳</div>
+                     <div style='font-family: Microsoft JhengHei; font-size: 14px;'><b>【特工站】興業站</b><br>竹科新竹園區<br>SO2 最大值：<span style='font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);'><b>2.5 ppb</b></span><br>時間：2026/10/07 01:00<br>等級：極佳</div>
                  </div>`,
                 {
   "sticky": true,
@@ -422,79 +324,24 @@
             );
         
     
-            var circle_marker_3c97a91d938d36dc65410eb4e1c3e3e7 = L.circleMarker(
-                [23.72195833, 120.3083472],
-                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.582, "stroke": true, "weight": 2}
-            ).addTo(feature_group_16b9af9dee0741fbd69462820892bc14);
+            feature_group_03206c574d07283b189a83d86cff5516.addTo(map_8509c0e7c877c9c73d1afb1510c0b31d);
         
     
-            circle_marker_3c97a91d938d36dc65410eb4e1c3e3e7.bindTooltip(
-                `<div>
-                     <div style='font-family: Microsoft JhengHei; font-size: 14px;'><b>【特工站】雲林縣褒忠站</b><br>台塑六輕工業園區<br>SO2 最大值：<span style='font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);'><b>2.91 ppb</b></span><br>時間：2026/10/05 10:00<br>等級：極佳</div>
-                 </div>`,
+            var feature_group_f1b21da8b76c424cf6183af37adb2a43 = L.featureGroup(
                 {
-  "sticky": true,
 }
             );
         
     
-            var circle_marker_47b72f2caab2f2912a689df8cc2e64af = L.circleMarker(
-                [23.76570556, 120.4580083],
-                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.612, "stroke": true, "weight": 2}
-            ).addTo(feature_group_16b9af9dee0741fbd69462820892bc14);
-        
-    
-            circle_marker_47b72f2caab2f2912a689df8cc2e64af.bindTooltip(
-                `<div>
-                     <div style='font-family: Microsoft JhengHei; font-size: 14px;'><b>【特工站】雲林縣西螺站</b><br>台塑六輕工業園區<br>SO2 最大值：<span style='font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);'><b>3.06 ppb</b></span><br>時間：2026/10/05 06:00<br>等級：極佳</div>
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-            var circle_marker_6e3c43dec7fac69cd47d74b2d4e6fb26 = L.circleMarker(
-                [23.84872222, 120.28485],
-                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.628, "stroke": true, "weight": 2}
-            ).addTo(feature_group_16b9af9dee0741fbd69462820892bc14);
-        
-    
-            circle_marker_6e3c43dec7fac69cd47d74b2d4e6fb26.bindTooltip(
-                `<div>
-                     <div style='font-family: Microsoft JhengHei; font-size: 14px;'><b>【特工站】彰化縣大城站</b><br>台塑六輕工業園區<br>SO2 最大值：<span style='font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);'><b>3.14 ppb</b></span><br>時間：2026/10/05 03:00<br>等級：極佳</div>
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-            var circle_marker_209b74459048b75e65e30b3823ca11d0 = L.circleMarker(
-                [23.63005, 120.1943472],
-                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.636, "stroke": true, "weight": 2}
-            ).addTo(feature_group_16b9af9dee0741fbd69462820892bc14);
-        
-    
-            circle_marker_209b74459048b75e65e30b3823ca11d0.bindTooltip(
-                `<div>
-                     <div style='font-family: Microsoft JhengHei; font-size: 14px;'><b>【特工站】雲林縣四湖站</b><br>台塑六輕工業園區<br>SO2 最大值：<span style='font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);'><b>3.18 ppb</b></span><br>時間：2026/10/05 10:00<br>等級：極佳</div>
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-            var circle_marker_2beaeff5ed86453b7fff010b419c36f9 = L.circleMarker(
+            var circle_marker_0e5438451c15e81d0ea7f7a354c6c2d5 = L.circleMarker(
                 [23.68655278, 120.3489583],
-                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.642, "stroke": true, "weight": 2}
-            ).addTo(feature_group_16b9af9dee0741fbd69462820892bc14);
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.436, "stroke": true, "weight": 2}
+            ).addTo(feature_group_f1b21da8b76c424cf6183af37adb2a43);
         
     
-            circle_marker_2beaeff5ed86453b7fff010b419c36f9.bindTooltip(
+            circle_marker_0e5438451c15e81d0ea7f7a354c6c2d5.bindTooltip(
                 `<div>
-                     <div style='font-family: Microsoft JhengHei; font-size: 14px;'><b>【特工站】雲林縣土庫站</b><br>台塑六輕工業園區<br>SO2 最大值：<span style='font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);'><b>3.21 ppb</b></span><br>時間：2026/10/05 08:00<br>等級：極佳</div>
+                     <div style='font-family: Microsoft JhengHei; font-size: 14px;'><b>【特工站】雲林縣土庫站</b><br>台塑六輕工業園區<br>SO2 最大值：<span style='font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);'><b>2.18 ppb</b></span><br>時間：2026/10/07 18:00<br>等級：極佳</div>
                  </div>`,
                 {
   "sticky": true,
@@ -502,15 +349,47 @@
             );
         
     
-            var circle_marker_74675b3478b94eee43c6c5a896e019eb = L.circleMarker(
+            var circle_marker_7f7fa3b5aeee92fff4164f51311eb4fb = L.circleMarker(
+                [23.791325, 120.3110306],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.446, "stroke": true, "weight": 2}
+            ).addTo(feature_group_f1b21da8b76c424cf6183af37adb2a43);
+        
+    
+            circle_marker_7f7fa3b5aeee92fff4164f51311eb4fb.bindTooltip(
+                `<div>
+                     <div style='font-family: Microsoft JhengHei; font-size: 14px;'><b>【特工站】雲林縣崙背站</b><br>台塑六輕工業園區<br>SO2 最大值：<span style='font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);'><b>2.23 ppb</b></span><br>時間：2026/10/07 21:00<br>等級：極佳</div>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_62e74ea72445abe1b5e9102eb67293ce = L.circleMarker(
+                [23.76570556, 120.4580083],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.568, "stroke": true, "weight": 2}
+            ).addTo(feature_group_f1b21da8b76c424cf6183af37adb2a43);
+        
+    
+            circle_marker_62e74ea72445abe1b5e9102eb67293ce.bindTooltip(
+                `<div>
+                     <div style='font-family: Microsoft JhengHei; font-size: 14px;'><b>【特工站】雲林縣西螺站</b><br>台塑六輕工業園區<br>SO2 最大值：<span style='font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);'><b>2.84 ppb</b></span><br>時間：2026/10/07 15:00<br>等級：極佳</div>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_02af3d2b9f28ca000942111adea8c40a = L.circleMarker(
                 [23.66521, 120.22011],
-                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.67, "stroke": true, "weight": 2}
-            ).addTo(feature_group_16b9af9dee0741fbd69462820892bc14);
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.614, "stroke": true, "weight": 2}
+            ).addTo(feature_group_f1b21da8b76c424cf6183af37adb2a43);
         
     
-            circle_marker_74675b3478b94eee43c6c5a896e019eb.bindTooltip(
+            circle_marker_02af3d2b9f28ca000942111adea8c40a.bindTooltip(
                 `<div>
-                     <div style='font-family: Microsoft JhengHei; font-size: 14px;'><b>【特工站】雲林縣東勢站</b><br>台塑六輕工業園區<br>SO2 最大值：<span style='font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);'><b>3.35 ppb</b></span><br>時間：2026/10/05 09:00<br>等級：極佳</div>
+                     <div style='font-family: Microsoft JhengHei; font-size: 14px;'><b>【特工站】雲林縣東勢站</b><br>台塑六輕工業園區<br>SO2 最大值：<span style='font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);'><b>3.07 ppb</b></span><br>時間：2026/10/07 01:00<br>等級：極佳</div>
                  </div>`,
                 {
   "sticky": true,
@@ -518,31 +397,15 @@
             );
         
     
-            var circle_marker_06544f874339e9be639cde4f16543cf3 = L.circleMarker(
-                [23.70092, 120.19157],
-                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.674, "stroke": true, "weight": 2}
-            ).addTo(feature_group_16b9af9dee0741fbd69462820892bc14);
-        
-    
-            circle_marker_06544f874339e9be639cde4f16543cf3.bindTooltip(
-                `<div>
-                     <div style='font-family: Microsoft JhengHei; font-size: 14px;'><b>【特工站】雲林縣台西站</b><br>台塑六輕工業園區<br>SO2 最大值：<span style='font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);'><b>3.37 ppb</b></span><br>時間：2026/10/05 10:00<br>等級：極佳</div>
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-            var circle_marker_48519dd74992c69f19803b6bbda6c59f = L.circleMarker(
+            var circle_marker_6d58d5f9ba5427d087297dd6373a3a79 = L.circleMarker(
                 [23.75762, 120.25128],
-                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.7, "stroke": true, "weight": 2}
-            ).addTo(feature_group_16b9af9dee0741fbd69462820892bc14);
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.634, "stroke": true, "weight": 2}
+            ).addTo(feature_group_f1b21da8b76c424cf6183af37adb2a43);
         
     
-            circle_marker_48519dd74992c69f19803b6bbda6c59f.bindTooltip(
+            circle_marker_6d58d5f9ba5427d087297dd6373a3a79.bindTooltip(
                 `<div>
-                     <div style='font-family: Microsoft JhengHei; font-size: 14px;'><b>【特工站】雲林縣麥寮站</b><br>台塑六輕工業園區<br>SO2 最大值：<span style='font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);'><b>3.5 ppb</b></span><br>時間：2026/10/05 10:00<br>等級：極佳</div>
+                     <div style='font-family: Microsoft JhengHei; font-size: 14px;'><b>【特工站】雲林縣麥寮站</b><br>台塑六輕工業園區<br>SO2 最大值：<span style='font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);'><b>3.17 ppb</b></span><br>時間：2026/10/07 09:00<br>等級：極佳</div>
                  </div>`,
                 {
   "sticky": true,
@@ -550,15 +413,47 @@
             );
         
     
-            var circle_marker_917ecaddc44f3d4ed75125fe03f161e0 = L.circleMarker(
+            var circle_marker_76b0c5c00c1843910e4ab7601e0f6911 = L.circleMarker(
+                [23.63005, 120.1943472],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.646, "stroke": true, "weight": 2}
+            ).addTo(feature_group_f1b21da8b76c424cf6183af37adb2a43);
+        
+    
+            circle_marker_76b0c5c00c1843910e4ab7601e0f6911.bindTooltip(
+                `<div>
+                     <div style='font-family: Microsoft JhengHei; font-size: 14px;'><b>【特工站】雲林縣四湖站</b><br>台塑六輕工業園區<br>SO2 最大值：<span style='font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);'><b>3.23 ppb</b></span><br>時間：2026/10/07 10:00<br>等級：極佳</div>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8645e4fef83029afd57cb5815a49e1c6 = L.circleMarker(
+                [23.72195833, 120.3083472],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.696, "stroke": true, "weight": 2}
+            ).addTo(feature_group_f1b21da8b76c424cf6183af37adb2a43);
+        
+    
+            circle_marker_8645e4fef83029afd57cb5815a49e1c6.bindTooltip(
+                `<div>
+                     <div style='font-family: Microsoft JhengHei; font-size: 14px;'><b>【特工站】雲林縣褒忠站</b><br>台塑六輕工業園區<br>SO2 最大值：<span style='font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);'><b>3.48 ppb</b></span><br>時間：2026/10/07 20:00<br>等級：極佳</div>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0ac78bd101a5044d26d588b5e33f6305 = L.circleMarker(
                 [23.46248333, 120.172425],
-                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.728, "stroke": true, "weight": 2}
-            ).addTo(feature_group_16b9af9dee0741fbd69462820892bc14);
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.708, "stroke": true, "weight": 2}
+            ).addTo(feature_group_f1b21da8b76c424cf6183af37adb2a43);
         
     
-            circle_marker_917ecaddc44f3d4ed75125fe03f161e0.bindTooltip(
+            circle_marker_0ac78bd101a5044d26d588b5e33f6305.bindTooltip(
                 `<div>
-                     <div style='font-family: Microsoft JhengHei; font-size: 14px;'><b>【特工站】嘉義縣東石站</b><br>台塑六輕工業園區<br>SO2 最大值：<span style='font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);'><b>3.64 ppb</b></span><br>時間：2026/10/05 10:00<br>等級：極佳</div>
+                     <div style='font-family: Microsoft JhengHei; font-size: 14px;'><b>【特工站】嘉義縣東石站</b><br>台塑六輕工業園區<br>SO2 最大值：<span style='font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);'><b>3.54 ppb</b></span><br>時間：2026/10/07 23:00<br>等級：極佳</div>
                  </div>`,
                 {
   "sticky": true,
@@ -566,24 +461,15 @@
             );
         
     
-            feature_group_16b9af9dee0741fbd69462820892bc14.addTo(map_2a2052aae02c69d7810abf936e28b6a1);
+            var circle_marker_a874ede6d336d740eb09029de92404c6 = L.circleMarker(
+                [23.84872222, 120.28485],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.852, "stroke": true, "weight": 2}
+            ).addTo(feature_group_f1b21da8b76c424cf6183af37adb2a43);
         
     
-            var feature_group_ab1773535c06f0d374cd03f3aec7653a = L.featureGroup(
-                {
-}
-            );
-        
-    
-            var circle_marker_ffd4ce6ef046c59d94ba798b86ddc0cd = L.circleMarker(
-                [22.588056, 120.286389],
-                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.658, "stroke": true, "weight": 2}
-            ).addTo(feature_group_ab1773535c06f0d374cd03f3aec7653a);
-        
-    
-            circle_marker_ffd4ce6ef046c59d94ba798b86ddc0cd.bindTooltip(
+            circle_marker_a874ede6d336d740eb09029de92404c6.bindTooltip(
                 `<div>
-                     <div style='font-family: Microsoft JhengHei; font-size: 14px;'><b>【特工站】旗津國中</b><br>臨海產業園區<br>SO2 最大值：<span style='font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);'><b>3.29 ppb</b></span><br>時間：2026/10/05 08:00<br>等級：極佳</div>
+                     <div style='font-family: Microsoft JhengHei; font-size: 14px;'><b>【特工站】彰化縣大城站</b><br>台塑六輕工業園區<br>SO2 最大值：<span style='font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);'><b>4.26 ppb</b></span><br>時間：2026/10/07 09:00<br>等級：極佳</div>
                  </div>`,
                 {
   "sticky": true,
@@ -591,15 +477,15 @@
             );
         
     
-            var circle_marker_2721e59daef12c60b19a04c7c10e9aec = L.circleMarker(
-                [22.57968, 120.32669],
-                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.734, "stroke": true, "weight": 2}
-            ).addTo(feature_group_ab1773535c06f0d374cd03f3aec7653a);
+            var circle_marker_e0aece837c11247390e06eea7c95fa99 = L.circleMarker(
+                [23.70092, 120.19157],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.954, "stroke": true, "weight": 2}
+            ).addTo(feature_group_f1b21da8b76c424cf6183af37adb2a43);
         
     
-            circle_marker_2721e59daef12c60b19a04c7c10e9aec.bindTooltip(
+            circle_marker_e0aece837c11247390e06eea7c95fa99.bindTooltip(
                 `<div>
-                     <div style='font-family: Microsoft JhengHei; font-size: 14px;'><b>【特工站】明正社區活動中心</b><br>臨海產業園區<br>SO2 最大值：<span style='font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);'><b>3.67 ppb</b></span><br>時間：2026/10/05 09:00<br>等級：極佳</div>
+                     <div style='font-family: Microsoft JhengHei; font-size: 14px;'><b>【特工站】雲林縣台西站</b><br>台塑六輕工業園區<br>SO2 最大值：<span style='font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);'><b>4.77 ppb</b></span><br>時間：2026/10/07 09:00<br>等級：極佳</div>
                  </div>`,
                 {
   "sticky": true,
@@ -607,15 +493,24 @@
             );
         
     
-            var circle_marker_e64ac269834fd91c1b8b47e70a3b57a4 = L.circleMarker(
-                [22.50344, 120.37958],
-                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.976, "stroke": true, "weight": 2}
-            ).addTo(feature_group_ab1773535c06f0d374cd03f3aec7653a);
+            feature_group_f1b21da8b76c424cf6183af37adb2a43.addTo(map_8509c0e7c877c9c73d1afb1510c0b31d);
         
     
-            circle_marker_e64ac269834fd91c1b8b47e70a3b57a4.bindTooltip(
+            var feature_group_abf739f86ff5bdbeb1f3a98d43ec8c53 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var circle_marker_810dac369353261450c5b93205614c5b = L.circleMarker(
+                [23.12582, 120.26943],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.44, "stroke": true, "weight": 2}
+            ).addTo(feature_group_abf739f86ff5bdbeb1f3a98d43ec8c53);
+        
+    
+            circle_marker_810dac369353261450c5b93205614c5b.bindTooltip(
                 `<div>
-                     <div style='font-family: Microsoft JhengHei; font-size: 14px;'><b>【特工站】頂厝里</b><br>臨海產業園區<br>SO2 最大值：<span style='font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);'><b>4.88 ppb</b></span><br>時間：2026/10/05 08:00<br>等級：極佳</div>
+                     <div style='font-family: Microsoft JhengHei; font-size: 14px;'><b>【特工站】公19測站</b><br>南科臺南園區<br>SO2 最大值：<span style='font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);'><b>2.2 ppb</b></span><br>時間：2026/10/07 10:00<br>等級：極佳</div>
                  </div>`,
                 {
   "sticky": true,
@@ -623,136 +518,15 @@
             );
         
     
-            var circle_marker_05256091fe701ea9838a38da5c9a58e8 = L.circleMarker(
-                [22.59916, 120.33945],
-                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.15, "stroke": true, "weight": 2}
-            ).addTo(feature_group_ab1773535c06f0d374cd03f3aec7653a);
-        
-    
-            circle_marker_05256091fe701ea9838a38da5c9a58e8.bindTooltip(
-                `<div>
-                     <div style='font-family: Microsoft JhengHei; font-size: 14px;'><b>【特工站】二甲里活動中心</b><br>臨海產業園區<br>SO2 最大值：<span style='font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);'><b>5.75 ppb</b></span><br>時間：2026/10/05 09:00<br>等級：極佳</div>
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-            var circle_marker_0ada8402112bb567a2d1978ad3691656 = L.circleMarker(
-                [22.56583, 120.35671],
-                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.232, "stroke": true, "weight": 2}
-            ).addTo(feature_group_ab1773535c06f0d374cd03f3aec7653a);
-        
-    
-            circle_marker_0ada8402112bb567a2d1978ad3691656.bindTooltip(
-                `<div>
-                     <div style='font-family: Microsoft JhengHei; font-size: 14px;'><b>【特工站】中山國中</b><br>臨海產業園區<br>SO2 最大值：<span style='font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);'><b>6.16 ppb</b></span><br>時間：2026/10/05 10:00<br>等級：極佳</div>
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-            var circle_marker_6b61c46914381b11e026680e7ea1556a = L.circleMarker(
-                [22.57251, 120.37149],
-                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFFF00", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.54, "stroke": true, "weight": 2}
-            ).addTo(feature_group_ab1773535c06f0d374cd03f3aec7653a);
-        
-    
-            circle_marker_6b61c46914381b11e026680e7ea1556a.bindTooltip(
-                `<div>
-                     <div style='font-family: Microsoft JhengHei; font-size: 14px;'><b>【特工站】太平國小</b><br>臨海產業園區<br>SO2 最大值：<span style='font-size: 16px; color: #FFFF00; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);'><b>7.7 ppb</b></span><br>時間：2026/10/05 10:00<br>等級：良好</div>
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-            var circle_marker_9e4f834850f247130e40c4a01129fc6b = L.circleMarker(
-                [22.547, 120.39781],
-                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFFF00", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.898, "stroke": true, "weight": 2}
-            ).addTo(feature_group_ab1773535c06f0d374cd03f3aec7653a);
-        
-    
-            circle_marker_9e4f834850f247130e40c4a01129fc6b.bindTooltip(
-                `<div>
-                     <div style='font-family: Microsoft JhengHei; font-size: 14px;'><b>【特工站】大坪頂</b><br>臨海產業園區<br>SO2 最大值：<span style='font-size: 16px; color: #FFFF00; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);'><b>9.49 ppb</b></span><br>時間：2026/10/05 07:00<br>等級：良好</div>
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-            var circle_marker_387a0c502947f1405ed7502fc47650b4 = L.circleMarker(
-                [22.56037, 120.40924],
-                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFFF00", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.492, "stroke": true, "weight": 2}
-            ).addTo(feature_group_ab1773535c06f0d374cd03f3aec7653a);
-        
-    
-            circle_marker_387a0c502947f1405ed7502fc47650b4.bindTooltip(
-                `<div>
-                     <div style='font-family: Microsoft JhengHei; font-size: 14px;'><b>【特工站】新厝里活動中心</b><br>臨海產業園區<br>SO2 最大值：<span style='font-size: 16px; color: #FFFF00; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);'><b>12.46 ppb</b></span><br>時間：2026/10/05 07:00<br>等級：良好</div>
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-            feature_group_ab1773535c06f0d374cd03f3aec7653a.addTo(map_2a2052aae02c69d7810abf936e28b6a1);
-        
-    
-            var feature_group_a0b1e3d909de7e3eb8aecca6c5dd3022 = L.featureGroup(
-                {
-}
-            );
-        
-    
-            var circle_marker_0caf22287d9bd15589047848010b6a38 = L.circleMarker(
-                [22.695393, 120.301884],
-                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.7, "stroke": true, "weight": 2}
-            ).addTo(feature_group_a0b1e3d909de7e3eb8aecca6c5dd3022);
-        
-    
-            circle_marker_0caf22287d9bd15589047848010b6a38.bindTooltip(
-                `<div>
-                     <div style='font-family: Microsoft JhengHei; font-size: 14px;'><b>【特工站】半屏山加壓站</b><br>楠梓產業園區<br>SO2 最大值：<span style='font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);'><b>3.5 ppb</b></span><br>時間：2026/10/05 08:00<br>等級：極佳</div>
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-            var circle_marker_bb9e3641ee5910f720321125addd06f3 = L.circleMarker(
-                [22.712882, 120.313685],
-                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.7, "stroke": true, "weight": 2}
-            ).addTo(feature_group_a0b1e3d909de7e3eb8aecca6c5dd3022);
-        
-    
-            circle_marker_bb9e3641ee5910f720321125addd06f3.bindTooltip(
-                `<div>
-                     <div style='font-family: Microsoft JhengHei; font-size: 14px;'><b>【特工站】園區北站</b><br>楠梓產業園區<br>SO2 最大值：<span style='font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);'><b>3.5 ppb</b></span><br>時間：2026/10/05 09:00<br>等級：極佳</div>
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-            var circle_marker_972b23612298e09a935d7b8a71d04e8f = L.circleMarker(
-                [22.709434, 120.303392],
+            var circle_marker_73914477703e8ca12f556c9da48e95ec = L.circleMarker(
+                [23.10635, 120.2692611],
                 {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.86, "stroke": true, "weight": 2}
-            ).addTo(feature_group_a0b1e3d909de7e3eb8aecca6c5dd3022);
+            ).addTo(feature_group_abf739f86ff5bdbeb1f3a98d43ec8c53);
         
     
-            circle_marker_972b23612298e09a935d7b8a71d04e8f.bindTooltip(
+            circle_marker_73914477703e8ca12f556c9da48e95ec.bindTooltip(
                 `<div>
-                     <div style='font-family: Microsoft JhengHei; font-size: 14px;'><b>【特工站】油廠國小</b><br>楠梓產業園區<br>SO2 最大值：<span style='font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);'><b>4.3 ppb</b></span><br>時間：2026/10/05 08:00<br>等級：極佳</div>
+                     <div style='font-family: Microsoft JhengHei; font-size: 14px;'><b>【特工站】公29測站</b><br>南科臺南園區<br>SO2 最大值：<span style='font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);'><b>4.3 ppb</b></span><br>時間：2026/10/07 08:00<br>等級：極佳</div>
                  </div>`,
                 {
   "sticky": true,
@@ -760,15 +534,15 @@
             );
         
     
-            var circle_marker_1e9ef794252df4120d58e5ce63a726b1 = L.circleMarker(
-                [22.703263, 120.32075],
-                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.02, "stroke": true, "weight": 2}
-            ).addTo(feature_group_a0b1e3d909de7e3eb8aecca6c5dd3022);
+            var circle_marker_162d2feb04afc16740d394f24796154b = L.circleMarker(
+                [23.09003889, 120.2845694],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.9, "stroke": true, "weight": 2}
+            ).addTo(feature_group_abf739f86ff5bdbeb1f3a98d43ec8c53);
         
     
-            circle_marker_1e9ef794252df4120d58e5ce63a726b1.bindTooltip(
+            circle_marker_162d2feb04afc16740d394f24796154b.bindTooltip(
                 `<div>
-                     <div style='font-family: Microsoft JhengHei; font-size: 14px;'><b>【特工站】園區東南站</b><br>楠梓產業園區<br>SO2 最大值：<span style='font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);'><b>5.1 ppb</b></span><br>時間：2026/10/05 08:00<br>等級：極佳</div>
+                     <div style='font-family: Microsoft JhengHei; font-size: 14px;'><b>【特工站】公13測站</b><br>南科臺南園區<br>SO2 最大值：<span style='font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);'><b>4.5 ppb</b></span><br>時間：2026/10/07 08:00<br>等級：極佳</div>
                  </div>`,
                 {
   "sticky": true,
@@ -776,24 +550,15 @@
             );
         
     
-            feature_group_a0b1e3d909de7e3eb8aecca6c5dd3022.addTo(map_2a2052aae02c69d7810abf936e28b6a1);
+            var circle_marker_ba1acb5993768d3bb2a19130b40a0dc4 = L.circleMarker(
+                [23.10739722, 120.2912611],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.98, "stroke": true, "weight": 2}
+            ).addTo(feature_group_abf739f86ff5bdbeb1f3a98d43ec8c53);
         
     
-            var feature_group_b624a248994ff242454cabf43d3c0961 = L.featureGroup(
-                {
-}
-            );
-        
-    
-            var circle_marker_441dc4c6112f505b39d51a664a508e25 = L.circleMarker(
-                [22.481753, 120.408958],
-                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.7059999999999995, "stroke": true, "weight": 2}
-            ).addTo(feature_group_b624a248994ff242454cabf43d3c0961);
-        
-    
-            circle_marker_441dc4c6112f505b39d51a664a508e25.bindTooltip(
+            circle_marker_ba1acb5993768d3bb2a19130b40a0dc4.bindTooltip(
                 `<div>
-                     <div style='font-family: Microsoft JhengHei; font-size: 14px;'><b>【特工站】林園區汕尾里</b><br>林園產業園區<br>SO2 最大值：<span style='font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);'><b>3.53 ppb</b></span><br>時間：2026/10/05 09:00<br>等級：極佳</div>
+                     <div style='font-family: Microsoft JhengHei; font-size: 14px;'><b>【特工站】南科實中測站</b><br>南科臺南園區<br>SO2 最大值：<span style='font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);'><b>4.9 ppb</b></span><br>時間：2026/10/07 08:00<br>等級：極佳</div>
                  </div>`,
                 {
   "sticky": true,
@@ -801,31 +566,24 @@
             );
         
     
-            var circle_marker_247a4c6325c3c47c4e5b3fed29723edd = L.circleMarker(
-                [22.48665, 120.394739],
-                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.712, "stroke": true, "weight": 2}
-            ).addTo(feature_group_b624a248994ff242454cabf43d3c0961);
+            feature_group_abf739f86ff5bdbeb1f3a98d43ec8c53.addTo(map_8509c0e7c877c9c73d1afb1510c0b31d);
         
     
-            circle_marker_247a4c6325c3c47c4e5b3fed29723edd.bindTooltip(
-                `<div>
-                     <div style='font-family: Microsoft JhengHei; font-size: 14px;'><b>【特工站】林園區西溪里</b><br>林園產業園區<br>SO2 最大值：<span style='font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);'><b>3.56 ppb</b></span><br>時間：2026/10/05 09:00<br>等級：極佳</div>
-                 </div>`,
+            var feature_group_5d2d244b7224733b18ebe0db46d6f858 = L.featureGroup(
                 {
-  "sticky": true,
 }
             );
         
     
-            var circle_marker_9b1edf13993013d025a8aebce15eacc0 = L.circleMarker(
+            var circle_marker_9a5a11ef9a3e74436077fc58e386b2e4 = L.circleMarker(
                 [22.508847, 120.394794],
-                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.992, "stroke": true, "weight": 2}
-            ).addTo(feature_group_b624a248994ff242454cabf43d3c0961);
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.484, "stroke": true, "weight": 2}
+            ).addTo(feature_group_5d2d244b7224733b18ebe0db46d6f858);
         
     
-            circle_marker_9b1edf13993013d025a8aebce15eacc0.bindTooltip(
+            circle_marker_9a5a11ef9a3e74436077fc58e386b2e4.bindTooltip(
                 `<div>
-                     <div style='font-family: Microsoft JhengHei; font-size: 14px;'><b>【特工站】林園區林園里</b><br>林園產業園區<br>SO2 最大值：<span style='font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);'><b>4.96 ppb</b></span><br>時間：2026/10/05 17:00<br>等級：極佳</div>
+                     <div style='font-family: Microsoft JhengHei; font-size: 14px;'><b>【特工站】林園區林園里</b><br>林園產業園區<br>SO2 最大值：<span style='font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);'><b>2.42 ppb</b></span><br>時間：2026/10/07 06:00<br>等級：極佳</div>
                  </div>`,
                 {
   "sticky": true,
@@ -833,63 +591,15 @@
             );
         
     
-            var circle_marker_eec5484343dedeb703eaac7650e57080 = L.circleMarker(
-                [22.50804, 120.40415],
-                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.04, "stroke": true, "weight": 2}
-            ).addTo(feature_group_b624a248994ff242454cabf43d3c0961);
-        
-    
-            circle_marker_eec5484343dedeb703eaac7650e57080.bindTooltip(
-                `<div>
-                     <div style='font-family: Microsoft JhengHei; font-size: 14px;'><b>【特工站】林園區五福里</b><br>林園產業園區<br>SO2 最大值：<span style='font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);'><b>5.2 ppb</b></span><br>時間：2026/10/05 17:00<br>等級：極佳</div>
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-            var circle_marker_799195b6cab9371e824e65ed0c1e1a2c = L.circleMarker(
-                [22.508839, 120.455369],
-                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFFF00", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.45, "stroke": true, "weight": 2}
-            ).addTo(feature_group_b624a248994ff242454cabf43d3c0961);
-        
-    
-            circle_marker_799195b6cab9371e824e65ed0c1e1a2c.bindTooltip(
-                `<div>
-                     <div style='font-family: Microsoft JhengHei; font-size: 14px;'><b>【特工站】新園鄉港西國小</b><br>林園產業園區<br>SO2 最大值：<span style='font-size: 16px; color: #FFFF00; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);'><b>7.25 ppb</b></span><br>時間：2026/10/05 16:00<br>等級：良好</div>
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-            var circle_marker_4027303b6a785f592399b739a64a7d0f = L.circleMarker(
-                [22.498569, 120.408064],
-                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFFF00", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.6579999999999995, "stroke": true, "weight": 2}
-            ).addTo(feature_group_b624a248994ff242454cabf43d3c0961);
-        
-    
-            circle_marker_4027303b6a785f592399b739a64a7d0f.bindTooltip(
-                `<div>
-                     <div style='font-family: Microsoft JhengHei; font-size: 14px;'><b>【特工站】林園工業區監測中心</b><br>林園產業園區<br>SO2 最大值：<span style='font-size: 16px; color: #FFFF00; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);'><b>8.29 ppb</b></span><br>時間：2026/10/05 02:00<br>等級：良好</div>
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-            var circle_marker_4a8b79e5786b88466ec95bc5be94b874 = L.circleMarker(
+            var circle_marker_3f795860fa5a4ca5d55743fb0679eff7 = L.circleMarker(
                 [22.521828, 120.348503],
-                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFFF00", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.088000000000001, "stroke": true, "weight": 2}
-            ).addTo(feature_group_b624a248994ff242454cabf43d3c0961);
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.548, "stroke": true, "weight": 2}
+            ).addTo(feature_group_5d2d244b7224733b18ebe0db46d6f858);
         
     
-            circle_marker_4a8b79e5786b88466ec95bc5be94b874.bindTooltip(
+            circle_marker_3f795860fa5a4ca5d55743fb0679eff7.bindTooltip(
                 `<div>
-                     <div style='font-family: Microsoft JhengHei; font-size: 14px;'><b>【特工站】小港區鳳林國中</b><br>林園產業園區<br>SO2 最大值：<span style='font-size: 16px; color: #FFFF00; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);'><b>10.44 ppb</b></span><br>時間：2026/10/05 04:00<br>等級：良好</div>
+                     <div style='font-family: Microsoft JhengHei; font-size: 14px;'><b>【特工站】小港區鳳林國中</b><br>林園產業園區<br>SO2 最大值：<span style='font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);'><b>2.74 ppb</b></span><br>時間：2026/10/07 06:00<br>等級：極佳</div>
                  </div>`,
                 {
   "sticky": true,
@@ -897,15 +607,31 @@
             );
         
     
-            var circle_marker_635409bfec7fddfc28d2093ac46d7481 = L.circleMarker(
+            var circle_marker_e68911ca6bebf23ae338e0ffe3998eaa = L.circleMarker(
+                [22.508839, 120.455369],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.57, "stroke": true, "weight": 2}
+            ).addTo(feature_group_5d2d244b7224733b18ebe0db46d6f858);
+        
+    
+            circle_marker_e68911ca6bebf23ae338e0ffe3998eaa.bindTooltip(
+                `<div>
+                     <div style='font-family: Microsoft JhengHei; font-size: 14px;'><b>【特工站】新園鄉港西國小</b><br>林園產業園區<br>SO2 最大值：<span style='font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);'><b>2.85 ppb</b></span><br>時間：2026/10/07 01:00<br>等級：極佳</div>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e81a7a7ccc8a6b002229ff887ee078dc = L.circleMarker(
                 [22.516256, 120.405436],
-                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFFF00", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.134, "stroke": true, "weight": 2}
-            ).addTo(feature_group_b624a248994ff242454cabf43d3c0961);
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.588, "stroke": true, "weight": 2}
+            ).addTo(feature_group_5d2d244b7224733b18ebe0db46d6f858);
         
     
-            circle_marker_635409bfec7fddfc28d2093ac46d7481.bindTooltip(
+            circle_marker_e81a7a7ccc8a6b002229ff887ee078dc.bindTooltip(
                 `<div>
-                     <div style='font-family: Microsoft JhengHei; font-size: 14px;'><b>【特工站】林園區溪州里</b><br>林園產業園區<br>SO2 最大值：<span style='font-size: 16px; color: #FFFF00; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);'><b>10.67 ppb</b></span><br>時間：2026/10/05 16:00<br>等級：良好</div>
+                     <div style='font-family: Microsoft JhengHei; font-size: 14px;'><b>【特工站】林園區溪州里</b><br>林園產業園區<br>SO2 最大值：<span style='font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);'><b>2.94 ppb</b></span><br>時間：2026/10/07 03:00<br>等級：極佳</div>
                  </div>`,
                 {
   "sticky": true,
@@ -913,15 +639,79 @@
             );
         
     
-            var circle_marker_8a50baf81e6fc4f234af7044f39b66c2 = L.circleMarker(
+            var circle_marker_6704529d5d0271567fd72d9576cbb8b5 = L.circleMarker(
+                [22.48665, 120.394739],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.628, "stroke": true, "weight": 2}
+            ).addTo(feature_group_5d2d244b7224733b18ebe0db46d6f858);
+        
+    
+            circle_marker_6704529d5d0271567fd72d9576cbb8b5.bindTooltip(
+                `<div>
+                     <div style='font-family: Microsoft JhengHei; font-size: 14px;'><b>【特工站】林園區西溪里</b><br>林園產業園區<br>SO2 最大值：<span style='font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);'><b>3.14 ppb</b></span><br>時間：2026/10/07 06:00<br>等級：極佳</div>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6d40aee2f9a743b89dcc264434cc7423 = L.circleMarker(
+                [22.498569, 120.408064],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.86, "stroke": true, "weight": 2}
+            ).addTo(feature_group_5d2d244b7224733b18ebe0db46d6f858);
+        
+    
+            circle_marker_6d40aee2f9a743b89dcc264434cc7423.bindTooltip(
+                `<div>
+                     <div style='font-family: Microsoft JhengHei; font-size: 14px;'><b>【特工站】林園工業區監測中心</b><br>林園產業園區<br>SO2 最大值：<span style='font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);'><b>4.3 ppb</b></span><br>時間：2026/10/07 06:00<br>等級：極佳</div>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_41f081c381937ef9318e687766ac25ed = L.circleMarker(
+                [22.481753, 120.408958],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.088, "stroke": true, "weight": 2}
+            ).addTo(feature_group_5d2d244b7224733b18ebe0db46d6f858);
+        
+    
+            circle_marker_41f081c381937ef9318e687766ac25ed.bindTooltip(
+                `<div>
+                     <div style='font-family: Microsoft JhengHei; font-size: 14px;'><b>【特工站】林園區汕尾里</b><br>林園產業園區<br>SO2 最大值：<span style='font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);'><b>5.44 ppb</b></span><br>時間：2026/10/07 06:00<br>等級：極佳</div>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_52b56c040aa926322bec48581b0f8090 = L.circleMarker(
+                [22.50804, 120.40415],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFFF00", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.354, "stroke": true, "weight": 2}
+            ).addTo(feature_group_5d2d244b7224733b18ebe0db46d6f858);
+        
+    
+            circle_marker_52b56c040aa926322bec48581b0f8090.bindTooltip(
+                `<div>
+                     <div style='font-family: Microsoft JhengHei; font-size: 14px;'><b>【特工站】林園區五福里</b><br>林園產業園區<br>SO2 最大值：<span style='font-size: 16px; color: #FFFF00; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);'><b>6.77 ppb</b></span><br>時間：2026/10/07 06:00<br>等級：良好</div>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b064366686412ec6de199681ff26f588 = L.circleMarker(
                 [22.562728, 120.428592],
-                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF7E00", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10.582, "stroke": true, "weight": 2}
-            ).addTo(feature_group_b624a248994ff242454cabf43d3c0961);
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF7E00", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12.968, "stroke": true, "weight": 2}
+            ).addTo(feature_group_5d2d244b7224733b18ebe0db46d6f858);
         
     
-            circle_marker_8a50baf81e6fc4f234af7044f39b66c2.bindTooltip(
+            circle_marker_b064366686412ec6de199681ff26f588.bindTooltip(
                 `<div>
-                     <div style='font-family: Microsoft JhengHei; font-size: 14px;'><b>【特工站】大寮區潮寮里</b><br>林園產業園區<br>SO2 最大值：<span style='font-size: 16px; color: #FF7E00; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);'><b>22.91 ppb</b></span><br>時間：2026/10/05 00:00<br>等級：普通</div>
+                     <div style='font-family: Microsoft JhengHei; font-size: 14px;'><b>【特工站】大寮區潮寮里</b><br>林園產業園區<br>SO2 最大值：<span style='font-size: 16px; color: #FF7E00; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);'><b>34.84 ppb</b></span><br>時間：2026/10/07 02:00<br>等級：普通</div>
                  </div>`,
                 {
   "sticky": true,
@@ -929,37 +719,247 @@
             );
         
     
-            feature_group_b624a248994ff242454cabf43d3c0961.addTo(map_2a2052aae02c69d7810abf936e28b6a1);
+            feature_group_5d2d244b7224733b18ebe0db46d6f858.addTo(map_8509c0e7c877c9c73d1afb1510c0b31d);
         
     
-            var layer_control_57572e8bb2dbb62da67207b232941087_layers = {
+            var feature_group_7a064356f45d140675b0566db1cdaac8 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var circle_marker_8a7859443fde7faad525f25f270925a9 = L.circleMarker(
+                [22.695393, 120.301884],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.58, "stroke": true, "weight": 2}
+            ).addTo(feature_group_7a064356f45d140675b0566db1cdaac8);
+        
+    
+            circle_marker_8a7859443fde7faad525f25f270925a9.bindTooltip(
+                `<div>
+                     <div style='font-family: Microsoft JhengHei; font-size: 14px;'><b>【特工站】半屏山加壓站</b><br>楠梓產業園區<br>SO2 最大值：<span style='font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);'><b>2.9 ppb</b></span><br>時間：2026/10/07 08:00<br>等級：極佳</div>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f2a7d397f921dd3616aefeec5be4a9cf = L.circleMarker(
+                [22.712882, 120.313685],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.68, "stroke": true, "weight": 2}
+            ).addTo(feature_group_7a064356f45d140675b0566db1cdaac8);
+        
+    
+            circle_marker_f2a7d397f921dd3616aefeec5be4a9cf.bindTooltip(
+                `<div>
+                     <div style='font-family: Microsoft JhengHei; font-size: 14px;'><b>【特工站】園區北站</b><br>楠梓產業園區<br>SO2 最大值：<span style='font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);'><b>3.4 ppb</b></span><br>時間：2026/10/07 08:00<br>等級：極佳</div>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e48a5867b2584ac7e9fd8ce673dcc4ef = L.circleMarker(
+                [22.709434, 120.303392],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.72, "stroke": true, "weight": 2}
+            ).addTo(feature_group_7a064356f45d140675b0566db1cdaac8);
+        
+    
+            circle_marker_e48a5867b2584ac7e9fd8ce673dcc4ef.bindTooltip(
+                `<div>
+                     <div style='font-family: Microsoft JhengHei; font-size: 14px;'><b>【特工站】油廠國小</b><br>楠梓產業園區<br>SO2 最大值：<span style='font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);'><b>3.6 ppb</b></span><br>時間：2026/10/07 08:00<br>等級：極佳</div>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_13b347b945987ae48099331aa6ed73a2 = L.circleMarker(
+                [22.703263, 120.32075],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.74, "stroke": true, "weight": 2}
+            ).addTo(feature_group_7a064356f45d140675b0566db1cdaac8);
+        
+    
+            circle_marker_13b347b945987ae48099331aa6ed73a2.bindTooltip(
+                `<div>
+                     <div style='font-family: Microsoft JhengHei; font-size: 14px;'><b>【特工站】園區東南站</b><br>楠梓產業園區<br>SO2 最大值：<span style='font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);'><b>3.7 ppb</b></span><br>時間：2026/10/07 10:00<br>等級：極佳</div>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            feature_group_7a064356f45d140675b0566db1cdaac8.addTo(map_8509c0e7c877c9c73d1afb1510c0b31d);
+        
+    
+            var feature_group_09eee90e904096c8d79c5c1a861ac386 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var circle_marker_f28eabc8110f944e617b01852d736c6c = L.circleMarker(
+                [22.547, 120.39781],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.604, "stroke": true, "weight": 2}
+            ).addTo(feature_group_09eee90e904096c8d79c5c1a861ac386);
+        
+    
+            circle_marker_f28eabc8110f944e617b01852d736c6c.bindTooltip(
+                `<div>
+                     <div style='font-family: Microsoft JhengHei; font-size: 14px;'><b>【特工站】大坪頂</b><br>臨海產業園區<br>SO2 最大值：<span style='font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);'><b>3.02 ppb</b></span><br>時間：2026/10/07 06:00<br>等級：極佳</div>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5191daf024ca38c41fc8981aa3140260 = L.circleMarker(
+                [22.56037, 120.40924],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.642, "stroke": true, "weight": 2}
+            ).addTo(feature_group_09eee90e904096c8d79c5c1a861ac386);
+        
+    
+            circle_marker_5191daf024ca38c41fc8981aa3140260.bindTooltip(
+                `<div>
+                     <div style='font-family: Microsoft JhengHei; font-size: 14px;'><b>【特工站】新厝里活動中心</b><br>臨海產業園區<br>SO2 最大值：<span style='font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);'><b>3.21 ppb</b></span><br>時間：2026/10/07 02:00<br>等級：極佳</div>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9e56289aa4e3715c3491568732076636 = L.circleMarker(
+                [22.50344, 120.37958],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.804, "stroke": true, "weight": 2}
+            ).addTo(feature_group_09eee90e904096c8d79c5c1a861ac386);
+        
+    
+            circle_marker_9e56289aa4e3715c3491568732076636.bindTooltip(
+                `<div>
+                     <div style='font-family: Microsoft JhengHei; font-size: 14px;'><b>【特工站】頂厝里</b><br>臨海產業園區<br>SO2 最大值：<span style='font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);'><b>4.02 ppb</b></span><br>時間：2026/10/07 06:00<br>等級：極佳</div>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7fd19e147e88632067ef016f96808944 = L.circleMarker(
+                [22.59916, 120.33945],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.836, "stroke": true, "weight": 2}
+            ).addTo(feature_group_09eee90e904096c8d79c5c1a861ac386);
+        
+    
+            circle_marker_7fd19e147e88632067ef016f96808944.bindTooltip(
+                `<div>
+                     <div style='font-family: Microsoft JhengHei; font-size: 14px;'><b>【特工站】二甲里活動中心</b><br>臨海產業園區<br>SO2 最大值：<span style='font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);'><b>4.18 ppb</b></span><br>時間：2026/10/07 08:00<br>等級：極佳</div>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f8efe0f6d2a4f050c4f0efee97ae5afa = L.circleMarker(
+                [22.57968, 120.32669],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.902, "stroke": true, "weight": 2}
+            ).addTo(feature_group_09eee90e904096c8d79c5c1a861ac386);
+        
+    
+            circle_marker_f8efe0f6d2a4f050c4f0efee97ae5afa.bindTooltip(
+                `<div>
+                     <div style='font-family: Microsoft JhengHei; font-size: 14px;'><b>【特工站】明正社區活動中心</b><br>臨海產業園區<br>SO2 最大值：<span style='font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);'><b>4.51 ppb</b></span><br>時間：2026/10/07 08:00<br>等級：極佳</div>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a8f3c5e111c3cde16d300929ac82c22a = L.circleMarker(
+                [22.588056, 120.286389],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.924, "stroke": true, "weight": 2}
+            ).addTo(feature_group_09eee90e904096c8d79c5c1a861ac386);
+        
+    
+            circle_marker_a8f3c5e111c3cde16d300929ac82c22a.bindTooltip(
+                `<div>
+                     <div style='font-family: Microsoft JhengHei; font-size: 14px;'><b>【特工站】旗津國中</b><br>臨海產業園區<br>SO2 最大值：<span style='font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);'><b>4.62 ppb</b></span><br>時間：2026/10/07 08:00<br>等級：極佳</div>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9dfb2fa1355071b9085310a644527d22 = L.circleMarker(
+                [22.57251, 120.37149],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.04, "stroke": true, "weight": 2}
+            ).addTo(feature_group_09eee90e904096c8d79c5c1a861ac386);
+        
+    
+            circle_marker_9dfb2fa1355071b9085310a644527d22.bindTooltip(
+                `<div>
+                     <div style='font-family: Microsoft JhengHei; font-size: 14px;'><b>【特工站】太平國小</b><br>臨海產業園區<br>SO2 最大值：<span style='font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);'><b>5.2 ppb</b></span><br>時間：2026/10/07 08:00<br>等級：極佳</div>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e3c815f9c27d37a56606a25440a3555c = L.circleMarker(
+                [22.56583, 120.35671],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E800", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.0760000000000005, "stroke": true, "weight": 2}
+            ).addTo(feature_group_09eee90e904096c8d79c5c1a861ac386);
+        
+    
+            circle_marker_e3c815f9c27d37a56606a25440a3555c.bindTooltip(
+                `<div>
+                     <div style='font-family: Microsoft JhengHei; font-size: 14px;'><b>【特工站】中山國中</b><br>臨海產業園區<br>SO2 最大值：<span style='font-size: 16px; color: #00E800; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);'><b>5.38 ppb</b></span><br>時間：2026/10/07 08:00<br>等級：極佳</div>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            feature_group_09eee90e904096c8d79c5c1a861ac386.addTo(map_8509c0e7c877c9c73d1afb1510c0b31d);
+        
+    
+            var layer_control_499a78ff526940f1bad4515f992ac091_layers = {
                 base_layers : {
-                    "\u003cspan style=\u0027font-size:14px; font-weight:bold;\u0027\u003eGoogle \u5730\u5716\u003c/span\u003e" : tile_layer_3584a33745cbaeb2041b262bded09bb3,
+                    "\u003cspan style=\u0027font-size:14px; font-weight:bold;\u0027\u003eGoogle \u5730\u5716\u003c/span\u003e" : tile_layer_ecb5f1e8b37f065c4fcde63eb1fa8856,
                 },
                 overlays :  {
-                    "\u003cspan style=\u0027font-size:14px; font-weight:bold;\u0027\u003e\u4e2d\u79d1\u81fa\u4e2d\u5712\u5340\u003c/span\u003e" : feature_group_bbdaddb0295c84b52bd01ae23f43e45c,
-                    "\u003cspan style=\u0027font-size:14px; font-weight:bold;\u0027\u003e\u7af9\u79d1\u7af9\u5357\u5712\u5340\u003c/span\u003e" : feature_group_5e5f697f61469cb04303f7e9afb181e5,
-                    "\u003cspan style=\u0027font-size:14px; font-weight:bold;\u0027\u003e\u5357\u79d1\u81fa\u5357\u5712\u5340\u003c/span\u003e" : feature_group_a232ef5f1ce707c80570e893148f20d3,
-                    "\u003cspan style=\u0027font-size:14px; font-weight:bold;\u0027\u003e\u7af9\u79d1\u65b0\u7af9\u5712\u5340\u003c/span\u003e" : feature_group_ccfcdf6f640a2478ab5556df673d660b,
-                    "\u003cspan style=\u0027font-size:14px; font-weight:bold;\u0027\u003e\u53f0\u5851\u516d\u8f15\u5de5\u696d\u5712\u5340\u003c/span\u003e" : feature_group_16b9af9dee0741fbd69462820892bc14,
-                    "\u003cspan style=\u0027font-size:14px; font-weight:bold;\u0027\u003e\u81e8\u6d77\u7522\u696d\u5712\u5340\u003c/span\u003e" : feature_group_ab1773535c06f0d374cd03f3aec7653a,
-                    "\u003cspan style=\u0027font-size:14px; font-weight:bold;\u0027\u003e\u6960\u6893\u7522\u696d\u5712\u5340\u003c/span\u003e" : feature_group_a0b1e3d909de7e3eb8aecca6c5dd3022,
-                    "\u003cspan style=\u0027font-size:14px; font-weight:bold;\u0027\u003e\u6797\u5712\u7522\u696d\u5712\u5340\u003c/span\u003e" : feature_group_b624a248994ff242454cabf43d3c0961,
+                    "\u003cspan style=\u0027font-size:14px; font-weight:bold;\u0027\u003e\u4e2d\u79d1\u81fa\u4e2d\u5712\u5340\u003c/span\u003e" : feature_group_333e5265c9daaaf908de61582940939a,
+                    "\u003cspan style=\u0027font-size:14px; font-weight:bold;\u0027\u003e\u7af9\u79d1\u7af9\u5357\u5712\u5340\u003c/span\u003e" : feature_group_2cfe21fde36ec1925869d8cee5d24a7e,
+                    "\u003cspan style=\u0027font-size:14px; font-weight:bold;\u0027\u003e\u7af9\u79d1\u65b0\u7af9\u5712\u5340\u003c/span\u003e" : feature_group_03206c574d07283b189a83d86cff5516,
+                    "\u003cspan style=\u0027font-size:14px; font-weight:bold;\u0027\u003e\u53f0\u5851\u516d\u8f15\u5de5\u696d\u5712\u5340\u003c/span\u003e" : feature_group_f1b21da8b76c424cf6183af37adb2a43,
+                    "\u003cspan style=\u0027font-size:14px; font-weight:bold;\u0027\u003e\u5357\u79d1\u81fa\u5357\u5712\u5340\u003c/span\u003e" : feature_group_abf739f86ff5bdbeb1f3a98d43ec8c53,
+                    "\u003cspan style=\u0027font-size:14px; font-weight:bold;\u0027\u003e\u6797\u5712\u7522\u696d\u5712\u5340\u003c/span\u003e" : feature_group_5d2d244b7224733b18ebe0db46d6f858,
+                    "\u003cspan style=\u0027font-size:14px; font-weight:bold;\u0027\u003e\u6960\u6893\u7522\u696d\u5712\u5340\u003c/span\u003e" : feature_group_7a064356f45d140675b0566db1cdaac8,
+                    "\u003cspan style=\u0027font-size:14px; font-weight:bold;\u0027\u003e\u81e8\u6d77\u7522\u696d\u5712\u5340\u003c/span\u003e" : feature_group_09eee90e904096c8d79c5c1a861ac386,
                 },
             };
-            let layer_control_57572e8bb2dbb62da67207b232941087 = L.control.layers(
-                layer_control_57572e8bb2dbb62da67207b232941087_layers.base_layers,
-                layer_control_57572e8bb2dbb62da67207b232941087_layers.overlays,
+            let layer_control_499a78ff526940f1bad4515f992ac091 = L.control.layers(
+                layer_control_499a78ff526940f1bad4515f992ac091_layers.base_layers,
+                layer_control_499a78ff526940f1bad4515f992ac091_layers.overlays,
                 {
   "position": "topleft",
   "collapsed": false,
   "autoZIndex": true,
 }
-            ).addTo(map_2a2052aae02c69d7810abf936e28b6a1);
+            ).addTo(map_8509c0e7c877c9c73d1afb1510c0b31d);
 
         
     
-            map_2a2052aae02c69d7810abf936e28b6a1.fitBounds(
+            map_8509c0e7c877c9c73d1afb1510c0b31d.fitBounds(
                 [[22.481753, 120.172425], [24.784714, 121.016265]],
                 {"padding": [40, 40]}
             );
